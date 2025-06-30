@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "93e9861e37c8a7f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "babc7085df15e854",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6580b2ad162d0a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Home"
+            }
+          },
+          {
+            "id": "c11830587a477d98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Home"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2fbecca68782fe8e",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc08cf52173e957b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5517a9c05a5ca61",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Penjelajah berkas"
+            }
+          },
+          {
+            "id": "4fc61e09a63a0007",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Penelusuran"
+            }
+          },
+          {
+            "id": "c099192dd7ee41e3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Penanda"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "06864f7594fee6d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "d22749216c443dc6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b5dc724a586b163",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Home.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlink pada Home"
+            }
+          },
+          {
+            "id": "0ff9cc33b56c9efc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Tautan keluar dari Home"
+            }
+          },
+          {
+            "id": "3a72a3b091617fe8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d56c8cfe1d045698",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Home.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Kerangka dari Home"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Buka peralih cepat": false,
+      "graph:Buka tampilan grafik": false,
+      "canvas:Buat kanvas baru": false,
+      "daily-notes:Buka catatan hari ini": false,
+      "templates:Masukkan template": false,
+      "command-palette:Buka palet perintah": false
+    }
+  },
+  "active": "c11830587a477d98",
+  "lastOpenFiles": [
+    "About.md",
+    "Home.md",
+    "Vault/Series/belajar-javascript-dari-dasar.md",
+    "Vault/Series/belajar-python-dari-dasar.md",
+    "Vault/Publish/belajar-python-dari-dasar/chapter-02-python-variabel-dan-tipe-data.md",
+    "Vault/Publish/belajar-python-dari-dasar/chapter-01-python-Pengenalan.md",
+    "Vault/Publish/belajar-javascript-dari-dasar/chapter-01-javascript-pengenalan.md",
+    "Vault/Publish/belajar-javascript-dari-dasar/chapter-02-javascript-variabel-dan-tipe-data.md",
+    "Templates/Template Index Series.md",
+    "Templates/Template Publish.md",
+    "Vault/Notes/202506301653 Function Di JavaScript.md",
+    "Vault/Notes/202506301624 Jenis Jenis Scope Di JavaScript.md",
+    "Vault/Notes/202506301604 Perbedaan var let dan const.md",
+    "Vault/Notes/202506301247 Alasan let Dan const Lebih Direkomendasikan.md",
+    "Vault/Notes/202506301213 Alasan Keyword var Di JavaScript Tidak Direkomendasikan.md",
+    "Templates/Template Notes.md",
+    "config.ts",
+    "Vault/Publish/belajar-python-dari-dasar/chapter-01-javascript-pengenalan.md",
+    "Vault/Publish/belajar-python-dari-dasar/chapter-02-javascript-variabel-dan-tipe-data.md",
+    "Vault/Publish/belajar-javascript-dari-dasar",
+    "Vault/Publish/belajar-python-dari-dasar",
+    "Vault/Series",
+    "Vault/Publish",
+    "Vault/Inbox",
+    "Vault/Notes"
+  ]
+}
