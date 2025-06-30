@@ -6,6 +6,7 @@ tags:
   - programming
   - fundamental
 date: 2025-06-30T12:13:54+07:00
+type: Notes
 ---
 
 # Alasan Keyword var Di JavaScript Tidak Direkomendasikan

@@ -6,6 +6,7 @@ tags:
   - programming
   - fundamental
 date: 2025-06-30T16:24:16+07:00
+type: Notes
 ---
 
 # Jenis Jenis Scope Di JavaScript

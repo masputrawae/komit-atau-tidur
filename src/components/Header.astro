@@ -1,46 +1,62 @@
 ---
-import { Image } from 'astro:assets'
-import { SITE, MENUS } from '../site.config'
+import Brand from './Brand.astro'
 
-const baseUrl = import.meta.env.BASE_URL
-const author = SITE.author
-const logo = `${baseUrl}${SITE.logo}`
-const tagline = SITE.tagline
+import { Icon } from 'astro-icon/components'
+import { MENUS } from '../site.config'
+import { relUrl, titleWord } from '../utils'
 
-const menu = [
-	{ label: 'Home', href: baseUrl, icon: 'icon-home' },
-	{ label: 'About', href: `${baseUrl}about/`, icon: 'icon-person-circle' },
-	{ label: 'Notes', href: `${baseUrl}notes/`, icon: 'icon-pencil-square' },
-	{ label: 'Gallery', href: `${baseUrl}gallery/`, icon: 'icon-photo' }
-]
+const menus = [MENUS.main, MENUS.social]
 ---
 
-<header class="border-b-2 border-zinc-800 bg-zinc-900 py-2 shadow-md shadow-black backdrop-blur-sm sticky top-0">
-	<nav class="container mx-auto flex items-center justify-between">
-		<a href={baseUrl} class="flex items-center gap-2">
-			<div
-				class="size-14 overflow-hidden rounded-full border border-zinc-900 shadow-sm shadow-black"
-			>
-				<Image src={logo} alt={author} width={56} height={56} class="hover:scale-110 transition-all duration-300" />
-			</div>
-			<div class="grid">
-				<strong class="text-zinc-50 text-shadow-black text-shadow-md">{author}</strong>
-				<em class="text-xs text-zinc-400 not-italic text-shadow-black text-shadow-md">{tagline}</em>
-			</div>
-		</a>
-
-		<div>
-			<button class="md:hidden">=</button>
-			<div class="flex items-center gap-2">
-				{
-					menu.map(item => {
-						const href = item.href
-						const label = item.label
-
-						return <a href={href}>{label}</a>
-					})
-				}
-			</div>
-		</div>
+<header
+	id="sidebar"
+	class="fixed top-0 left-0 z-50 grid h-dvh w-xs grid-rows-[auto_minmax(0,1fr)_auto] gap-5 border-r border-r-zinc-800 bg-zinc-900 p-5 shadow-sm shadow-black transition-all duration-300 lg:sticky"
+>
+	<nav class="flex items-center justify-between">
+		<Brand />
+		<button class="lg:hidden" onclick="document.getElementById('sidebar').classList.remove('isActive')">
+			<Icon name="icon-x-mark" class="size-6 text-white" />
+		</button>
 	</nav>
+
+	{
+		menus.map(menu => (
+			<nav class="flex flex-col">
+				{menu.map(item => {
+					const { pathname } = Astro.url
+					const href = relUrl(item.href)
+					const label = item.label
+					const icon = item.icon
+
+					const isActive = href === pathname || (href !== relUrl('/') && pathname.startsWith(href))
+					const classes = `flex items-center gap-2.5 transition-colors duration-500 hover:text-zinc-50 p-2 ${isActive ? 'text-white border border-zinc-800 shadow-sm shadow-black rounded-md' : 'text-zinc-400'}`
+
+					return (
+						<a href={href} class={classes}>
+							<Icon name={icon} />
+							<span>{label}</span>
+						</a>
+					)
+				})}
+			</nav>
+		))
+	}
 </header>
+
+<style lang="css" itemscope>
+	#sidebar {
+		visibility: hidden;
+		transform: translateX(-100%);
+	}
+	#sidebar.isActive {
+		visibility: visible;
+		transform: translateX(0%);
+	}
+
+	@media (min-width: 64rem) {
+		#sidebar {
+			visibility: visible;
+			transform: none;
+		}
+	}
+</style>

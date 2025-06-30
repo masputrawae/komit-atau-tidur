@@ -8,12 +8,11 @@ const vault = defineCollection({
     tags: z.array(z.string()),
     date: z.coerce.date(),
 
+    update: z.coerce.date().optional(),
     description: z.string().optional(),
     image: z.string().optional(),
-    cover: z.string().optional(),
-    type: z.enum(['series', 'publish']).optional(),
-
-    update: z.coerce.date().optional(),
+    
+    type: z.enum(['Series', 'Publish', 'Projects', 'Notes']).optional(),
   }),
 })
 

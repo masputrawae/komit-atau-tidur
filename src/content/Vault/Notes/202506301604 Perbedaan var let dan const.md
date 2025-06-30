@@ -6,6 +6,7 @@ tags:
   - programming
   - fundamental
 date: 2025-06-30T16:04:18+07:00
+type: Notes
 ---
 
 # Perbedaan var let dan const

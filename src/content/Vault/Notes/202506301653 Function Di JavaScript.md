@@ -7,6 +7,7 @@ tags:
   - fundamental
   - core-concept
 date: 2025-06-30T16:53:18+07:00
+type: Notes
 ---
 
 # Function Di JavaScript

@@ -3,20 +3,25 @@ import '../styles/global.css'
 
 import Footer from './Footer.astro'
 import Header from './Header.astro'
+import MobileHeader from './MobileHeader.astro'
 ---
 
-<html lang="en" class="bg-zinc-950 text-zinc-300">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Header />
-    <main class="container mx-auto">
-      <slot />
-    </main>
-    <Footer />
-  </body>
+<html lang="en" class="bg-zinc-900 font-['Noto_Sans'] text-zinc-300">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="block lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-10">
+		<Header />
+		<MobileHeader />
+		<div
+			class="container min-h-dvh mt-10 mx-auto"
+			onclick="document.getElementById('sidebar').classList.remove('isActive')"
+		>
+			<slot />
+			<Footer />
+		</div>
+	</body>
 </html>

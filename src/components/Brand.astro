@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+import { SITE } from '../site.config'
+import { relUrl } from '../utils'
+
+const logo = relUrl(SITE.logo)
+const href = relUrl('/')
+const title = SITE.author
+const tagline = SITE.tagline
+---
+
+<a href={href} class="flex items-center gap-2">
+	<Image
+		src={logo}
+		alt={title}
+		width={56}
+		height={56}
+		quality={`max`}
+		class="rounded-full border-2 border-zinc-900 shadow-md shadow-black hover:animate-pulse"
+	/>
+	<div class="grid text-shadow-black text-shadow-md">
+		<strong class="text-lg text-zinc-50">{title}</strong>
+		<em class="text-xs text-zinc-400 not-italic">{tagline}</em>
+	</div>
+</a>

@@ -3,14 +3,13 @@ unique_id: '202506301844'
 title: 'Chapter 02 - Python: Variabel dan Tipe Data'
 description: 'Memahami variabel, tipe data, dan operator dasar Python'
 image: https://picsum.photos/1080/720?2
-cover: https://picsum.photos/1080/720?2
 tags:
   - python
   - programming
   - fundamental
 date: 2025-06-30T18:44:10+07:00
 update: 2025-06-30T18:44:10+07:00
-type: publish
+type: Publish
 ---
 
 # Chapter 02 - Python: Variabel dan Tipe Data

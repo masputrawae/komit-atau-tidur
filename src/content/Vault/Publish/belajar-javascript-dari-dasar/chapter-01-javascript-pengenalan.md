@@ -3,14 +3,13 @@ unique_id: '202506301841'
 title: 'Chapter 01 - JavaScript: Pengenalan'
 description: 'Memahami dasar-dasar JavaScript, sejarah, dan cara menjalankan kode JavaScript'
 image: https://picsum.photos/1080/720?1
-cover: https://picsum.photos/1080/720?1
 tags:
   - javascript
   - programming
   - fundamental
 date: 2025-06-30T18:41:34+07:00
 update: 2025-06-30T18:41:34+07:00
-type: publish
+type: Publish
 ---
 
 # Chapter 01 - JavaScript: Pengenalan

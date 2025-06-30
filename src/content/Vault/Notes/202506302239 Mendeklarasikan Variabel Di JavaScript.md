@@ -7,6 +7,7 @@ tags:
   - fundamental
   - core-concept
 date: 2025-06-30T22:39:52+07:00
+type: Notes
 ---
 
 # Mendeklarasikan Variabel Di JavaScript

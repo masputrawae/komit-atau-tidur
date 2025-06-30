@@ -6,6 +6,7 @@ tags:
   - programming
   - fundamental
 date: 2025-06-30T12:47:57+07:00
+type: Notes
 ---
 
 # Alasan let Dan const Lebih Direkomendasikan

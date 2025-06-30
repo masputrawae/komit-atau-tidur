@@ -3,14 +3,13 @@ unique_id: '202506301842'
 title: 'Chapter 02 - JavaScript: Variabel dan Tipe Data'
 description: 'Memahami variabel, konstanta, dan tipe data dasar dalam JavaScript'
 image: https://picsum.photos/1080/720?1
-cover: https://picsum.photos/1080/720?1
 tags:
   - javascript
   - programming
   - fundamental
 date: 2025-06-30T18:42:15+07:00
 update: 2025-06-30T18:42:15+07:00
-type: publish
+type: Publish
 ---
 
 # Chapter 02 - JavaScript: Variabel dan Tipe Data
