@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "8beff5cc5a2713c3",
+        "id": "aa9ebb7c55d10937",
         "type": "tabs",
         "children": [
           {
-            "id": "c0045a1d6e3b1467",
+            "id": "518f1a2cdf4ae816",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Vault/Notes/202506301653 Function Di JavaScript.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Vault/Notes/202506301653 Function Di JavaScript.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "Vault/Notes/202506301653 Function Di JavaScript.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -107,7 +113,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "Vault/Notes/202506301653 Function Di JavaScript.md"
+          }
         }
       }
     ],
@@ -124,16 +132,25 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "c0045a1d6e3b1467",
+  "active": "518f1a2cdf4ae816",
   "lastOpenFiles": [
-    "Vault/Notes/202506302239 Mendeklarasikan Variabel Di JavaScript.md",
+    "Alasan Perlu Function.md",
+    "Vault/Notes/202506301653 Function Di JavaScript.md",
+    "Vault/Notes/202507010302 Kontrol Alur If Else Di JavaScript.md",
+    "Vault/Notes/202507010543 Ternary Operator Di JavaScript.md",
     "Vault/Notes/Tanpa judul.md",
+    "Vault/Notes/202506302239 Mendeklarasikan Variabel Di JavaScript.md",
+    "Vault/Projects/Example Project 2.md",
+    "Vault/Projects/Example Project 1.md",
+    "Templates/Template Projects.md",
+    "Vault/Projects",
+    "Templates/Template Publish.md",
+    "Vault/Notes/202506301604 Perbedaan var let dan const.md",
+    "Vault/Notes/202506301624 Jenis Jenis Scope Di JavaScript.md",
     "Vault/Series/belajar-javascript-dari-dasar.md",
     "Vault/Publish/belajar-javascript-dari-dasar/chapter-01-javascript-pengenalan.md",
     "Vault/Publish/belajar-javascript-dari-dasar/chapter-02-javascript-variabel-dan-tipe-data.md",
     "Vault/Series/belajar-python-dari-dasar.md",
-    "Vault/Notes/202506301624 Jenis Jenis Scope Di JavaScript.md",
-    "Vault/Notes/202506301653 Function Di JavaScript.md",
     "About.md",
     "Vault/Notes/202506301213 Alasan Keyword var Di JavaScript Tidak Direkomendasikan.md"
   ]

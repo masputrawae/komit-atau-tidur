@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiSquareKanban",
       "LiCode2",
       "LiListOrdered",
       "LiGlobe",
-      "LiPencil",
-      "LiBoxes"
+      "LiPencil"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -40,5 +40,6 @@
   "Vault/Publish": "LiGlobe",
   "Vault/Series": "LiListOrdered",
   "Vault/Publish/belajar-javascript-dari-dasar": "LiCode2",
-  "Vault/Publish/belajar-python-dari-dasar": "LiCode2"
+  "Vault/Publish/belajar-python-dari-dasar": "LiCode2",
+  "Vault/Projects": "LiSquareKanban"
 }

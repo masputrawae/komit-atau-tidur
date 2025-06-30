@@ -45,5 +45,5 @@ let isBelajar = true
 - [[202506301213 Alasan Keyword var Di JavaScript Tidak Direkomendasikan]]
 - [[Tipe Data Di JavaScript]]
 - [[Conversation Naming Variabel Di JavaScript]]
-- [[Kontrol Alur If Else Di JavaScript]]
+- [[202507010302 Kontrol Alur If Else Di JavaScript]]
 - [[Looping Di JavaScript]]
