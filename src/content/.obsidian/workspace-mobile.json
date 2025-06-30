@@ -1,0 +1,140 @@
+{
+  "main": {
+    "id": "8742b6d58e1621b0",
+    "type": "split",
+    "children": [
+      {
+        "id": "8beff5cc5a2713c3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c0045a1d6e3b1467",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6d49d5d1d1bb9f8b",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "b3640fe100d7d778",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "4261f3d93f79bfe1",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "ad595ab54a831c7b",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "75a4835f20554d3d",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "bbbac313ab4cd5fa",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "1973e43e4a52cbe4",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "7fe2abcda53b1ae2",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "13de971ed1e049ed",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Buka peralih cepat": false,
+      "graph:Buka tampilan grafik": false,
+      "canvas:Buat kanvas baru": false,
+      "daily-notes:Buka catatan hari ini": false,
+      "templates:Masukkan template": false,
+      "command-palette:Buka palet perintah": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "c0045a1d6e3b1467",
+  "lastOpenFiles": [
+    "Vault/Notes/202506302239 Mendeklarasikan Variabel Di JavaScript.md",
+    "Vault/Notes/Tanpa judul.md",
+    "Vault/Series/belajar-javascript-dari-dasar.md",
+    "Vault/Publish/belajar-javascript-dari-dasar/chapter-01-javascript-pengenalan.md",
+    "Vault/Publish/belajar-javascript-dari-dasar/chapter-02-javascript-variabel-dan-tipe-data.md",
+    "Vault/Series/belajar-python-dari-dasar.md",
+    "Vault/Notes/202506301624 Jenis Jenis Scope Di JavaScript.md",
+    "Vault/Notes/202506301653 Function Di JavaScript.md",
+    "About.md",
+    "Vault/Notes/202506301213 Alasan Keyword var Di JavaScript Tidak Direkomendasikan.md"
+  ]
+}
