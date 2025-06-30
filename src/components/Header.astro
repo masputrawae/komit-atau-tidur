@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets'
+import { SITE, MENUS } from '../site.config'
+
+const baseUrl = import.meta.env.BASE_URL
+const author = SITE.author
+const logo = `${baseUrl}${SITE.logo}`
+const tagline = SITE.tagline
+
+const menu = [
+	{ label: 'Home', href: baseUrl, icon: 'icon-home' },
+	{ label: 'About', href: `${baseUrl}about/`, icon: 'icon-person-circle' },
+	{ label: 'Notes', href: `${baseUrl}notes/`, icon: 'icon-pencil-square' },
+	{ label: 'Gallery', href: `${baseUrl}gallery/`, icon: 'icon-photo' }
+]
+---
+
+<header class="border-b-2 border-zinc-800 bg-zinc-900 py-2 shadow-md shadow-black backdrop-blur-sm sticky top-0">
+	<nav class="container mx-auto flex items-center justify-between">
+		<a href={baseUrl} class="flex items-center gap-2">
+			<div
+				class="size-14 overflow-hidden rounded-full border border-zinc-900 shadow-sm shadow-black"
+			>
+				<Image src={logo} alt={author} width={56} height={56} class="hover:scale-110 transition-all duration-300" />
+			</div>
+			<div class="grid">
+				<strong class="text-zinc-50 text-shadow-black text-shadow-md">{author}</strong>
+				<em class="text-xs text-zinc-400 not-italic text-shadow-black text-shadow-md">{tagline}</em>
+			</div>
+		</a>
+
+		<div>
+			<button class="md:hidden">=</button>
+			<div class="flex items-center gap-2">
+				{
+					menu.map(item => {
+						const href = item.href
+						const label = item.label
+
+						return <a href={href}>{label}</a>
+					})
+				}
+			</div>
+		</div>
+	</nav>
+</header>
