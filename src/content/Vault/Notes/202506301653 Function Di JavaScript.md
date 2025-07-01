@@ -1,5 +1,5 @@
 ---
-unique_id: "202506301653"
+unique_id: '202506301653'
 title: Function Di JavaScript
 tags:
   - javascript
@@ -12,7 +12,7 @@ type: Notes
 
 # Function Di JavaScript
 
-Function atau fungsi, adalah serangkaian kode yang memiliki tugas tertentu, yang akan mengembalikan suatu nilai dari operasi di dalam function 
+Function atau fungsi, adalah serangkaian kode yang memiliki tugas tertentu, yang akan mengembalikan suatu nilai dari operasi di dalam function
 
 ## Tujuan function
 
@@ -24,11 +24,11 @@ Function atau fungsi, adalah serangkaian kode yang memiliki tugas tertentu, yang
 
 ```javascript
 // Buat Fungsi Penjumlahan
-function penjumlahan(a, b){
+function penjumlahan(a, b) {
 	return a + b
 }
 
-// Gunakan Fungsi 
+// Gunakan Fungsi
 console.log(penjumlahan(10, 5)) // Output: 15
 console.log(penjumlahan(1, 5)) // Output: 6
 console.log(penjumlahan(10, 10)) // Output: 20
@@ -39,7 +39,7 @@ Tentang Return: [[Return Di JavaScript]]
 **Contoh lain**:
 
 ```javascript
-function sapa(nama){
+function sapa(nama) {
 	return `Hai ${nama}, Bagaimana Kabarnya?`
 }
 
@@ -47,6 +47,7 @@ console.log(sapa('Joko')) // Output: Hai Joko Bagaimana Kabarnya?
 console.log(sapa('Andri')) // Output: Hai Andri Bagaimana Kabarnya?
 console.log(sapa('Eko')) // Output: Hai Eko Bagaimana Kabarnya?
 ```
+
 ## 🔗 Terkait
 
 - [[Alasan Perlu Function]]

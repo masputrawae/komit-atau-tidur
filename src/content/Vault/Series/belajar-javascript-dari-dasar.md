@@ -1,5 +1,5 @@
 ---
-unique_id: "202506301838"
+unique_id: '202506301838'
 title: Belajar JavaScript dari Dasar
 description: Seri pembelajaran JavaScript untuk pemula dari pengenalan hingga konsep fundamental
 image: https://picsum.photos/1080/720?1
@@ -17,7 +17,6 @@ type: Series
 ## Daftar Chapter
 
 1. [Chapter 1 - JavaScript: Pengenalan](../Publish/belajar-javascript-dari-dasar/chapter-01-javascript-pengenalan.md)
-
    - Pengenalan bahasa JavaScript
    - Sejarah dan ekosistem
    - Cara menjalankan kode JavaScript

@@ -1,5 +1,5 @@
 ---
-unique_id: "202506301845"
+unique_id: '202506301845'
 title: Belajar Python dari Dasar
 description: Seri pembelajaran Python untuk pemula dari instalasi hingga konsep fundamental
 image: https://picsum.photos/1080/720?2
@@ -17,13 +17,11 @@ type: Series
 ## **Daftar Chapter**
 
 1. [Chapter 1 - Python: Pengenalan](../Publish/belajar-python-dari-dasar/chapter-01-python-Pengenalan.md)
-
    - Pengenalan bahasa Python
    - Instalasi dan tools
    - Program pertama
 
 2. [Chapter 2 - Variabel dan Tipe Data](../Publish/belajar-python-dari-dasar/chapter-02-python-variabel-dan-tipe-data.md)
-
    - Deklarasi variabel
    - Tipe data primitif
    - Operator dasar

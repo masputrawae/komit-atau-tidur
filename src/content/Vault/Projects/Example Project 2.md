@@ -1,5 +1,5 @@
 ---
-unique_id: "202507010300"
+unique_id: '202507010300'
 title: Example Project 2
 description: Culpa exercitation cupidatat sunt velit anim quis aliquip in veniam ipsum adipisicing voluptate.
 image: https://picsum.photos/1080/720?5
@@ -10,4 +10,5 @@ date: 2025-07-01T03:00:16+07:00
 update: 2025-07-01T03:00:16+07:00
 type: Projects
 ---
+
 # Example Project 2

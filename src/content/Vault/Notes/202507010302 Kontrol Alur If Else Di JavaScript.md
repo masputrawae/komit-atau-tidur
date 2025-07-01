@@ -1,5 +1,5 @@
 ---
-unique_id: "202507010302"
+unique_id: '202507010302'
 title: Kontrol Alur If Else Di JavaScript
 tags:
   - javascript
@@ -15,13 +15,13 @@ Membuat kode lebih logis untuk menangani beberapa kondisi atau banyak kondisi.
 
 ## Contoh Alur Sederhana
 
-- Jika nilai ujian si *Otong* lebih dari 75, Maka *Otong* mendapatkan Ijazah
-- Jika Tidak Si *Otong* Tidak lulus 
+- Jika nilai ujian si _Otong_ lebih dari 75, Maka _Otong_ mendapatkan Ijazah
+- Jika Tidak Si _Otong_ Tidak lulus
 
 ```javascript
 const nilaiOtong = 80
 
-if(nilaiOtong > 75) {
+if (nilaiOtong > 75) {
 	console.log('Otong Lulus dan dapat ijazah')
 } else {
 	console.log('Otong Tidak Lulus')
@@ -32,6 +32,7 @@ if(nilaiOtong > 75) {
 
 - `if` mengecek apakah `nilaiOtong` lebih dari 75? jika ya jalankan `console.log('Otong Lulus dan dapat ijazah')`
 - `else` jika kondisi`if` tidak terpenuhi maka jalankan `console.log('Otong Tidak Lulus')`
+
 ## 🔗 Terkait
 
 - [[Lanjutan Kontrol Alur If Else Di JavaScript]]

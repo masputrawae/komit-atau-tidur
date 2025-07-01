@@ -1,5 +1,5 @@
 ---
-unique_id: "202506301213"
+unique_id: '202506301213'
 title: Alasan Keyword var Di JavaScript Tidak Direkomendasikan
 tags:
   - javascript
@@ -35,17 +35,17 @@ console.log(a)
 ```javascript
 console.log(nama)
 
-var nama = "John Doe"
+var nama = 'John Doe'
 // Output: Undefined
 ```
 
 ### 📝 Bisa Replace Atau Dideklarasikan Ulang
 
 ```javascript
-var nama = "John Doe"
+var nama = 'John Doe'
 console.log(nama)
 
-var nama = "Smith"
+var nama = 'Smith'
 console.log(nama)
 
 // Output:

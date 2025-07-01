@@ -1,5 +1,5 @@
 ---
-unique_id: "202506301247"
+unique_id: '202506301247'
 title: Alasan let Dan const Lebih Direkomendasikan
 tags:
   - javascript
@@ -17,24 +17,25 @@ type: Notes
 - Tidak bisa replace atau dideklarasikan ulang
 
 ## 🔍 Contoh Kelebihan nya
+
 ### 🚨 Mengatasi Hoisting
 
 ```javascript
 console.log(a)
 
 let a = 10
-// Output: 
+// Output:
 // Uncaught ReferenceError: Cannot access 'a' before initialization
 ```
 
-Lebih jelas daripada hanya `Undefined` 
+Lebih jelas daripada hanya `Undefined`
 
 ### 🔒 Block Scope
 
 ```javascript
 {
-    let a = 10
-    console.log(a)
+	let a = 10
+	console.log(a)
 }
 console.log(a)
 
@@ -46,10 +47,10 @@ console.log(a)
 ### 📝 Tidak bisa replace atau dideklarasikan ulang
 
 ```javascript
-let nama = "John Doe"
+let nama = 'John Doe'
 console.log(nama)
 
-let nama = "Smith"
+let nama = 'Smith'
 console.log(nama)
 
 // Output:

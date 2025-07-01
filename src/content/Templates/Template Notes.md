@@ -1,13 +1,12 @@
 ---
 unique_id: '{{date:YYYYMMDDHHmm}}'
 title: '{{title}}'
-tags: 
+tags:
 date: {{date:YYYY-MM-DDTHH:mm:ssZ}}
 type: Notes
 ---
 
 # {{title}}
-
 
 ## 🔗 Terkait
 

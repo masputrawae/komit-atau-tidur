@@ -1,5 +1,5 @@
 ---
-unique_id: "202506301624"
+unique_id: '202506301624'
 title: Jenis Jenis Scope Di JavaScript
 tags:
   - javascript
@@ -13,7 +13,7 @@ type: Notes
 
 ## 🌏 Global Scope
 
-Cakupan global yang bisa diakses dari mana saja 
+Cakupan global yang bisa diakses dari mana saja
 **Contoh**:
 
 ```javascript
@@ -21,12 +21,12 @@ var a = 'Aku Di Global'
 
 console.log('Dari Global: ', a)
 
-function functionScope(){
-    console.log('Dari Function: ', a)
+function functionScope() {
+	console.log('Dari Function: ', a)
 }
 
 {
-    console.log('Dari Block: ', a)
+	console.log('Dari Block: ', a)
 }
 
 functionScope()
@@ -37,7 +37,7 @@ functionScope()
 Variabel yang dideklarasikan di dalam function Hanya bisa di akses di dalam function saja
 
 ```javascript
-function hanyaFungsi(){
+function hanyaFungsi() {
 	let a = 'Aku Berada Di Function'
 	console.log('Dari Function: ', a)
 }
@@ -50,15 +50,15 @@ console.log('Dari Luar Function: ', a)
 
 ## 🔒 Block scope
 
-Scope yang dikurung oleh `{}` akan terisolasi di dalam block scope tersebut 
+Scope yang dikurung oleh `{}` akan terisolasi di dalam block scope tersebut
 
 **Contoh**:
 
 ```javascript
 {
-    let a = 'Aku Dari Blok Scope'
-    console.log('Dari Block Scope: ', a)
-    // Output: Dari Block Scope: Aku Berada Di Block Scope
+	let a = 'Aku Dari Blok Scope'
+	console.log('Dari Block Scope: ', a)
+	// Output: Dari Block Scope: Aku Berada Di Block Scope
 }
 
 console.log('Dari Luar Block Scope: ', a)

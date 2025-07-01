@@ -14,7 +14,7 @@ const menus = [MENUS.main, MENUS.social]
 >
 	<nav class="flex items-center justify-between">
 		<Brand />
-		<button class="lg:hidden" onclick="document.getElementById('sidebar').classList.remove('isActive')">
+		<button class="lg:hidden" onclick="sideToggle()">
 			<Icon name="icon-x-mark" class="size-6 text-white" />
 		</button>
 	</nav>
@@ -43,14 +43,32 @@ const menus = [MENUS.main, MENUS.social]
 	}
 </header>
 
+<div
+	onclick="sideToggle()"
+	id="overlaySidebar"
+	class="fixed z-40 size-full lg:hidden bg-zinc-950/90 transition-all duration-300"
+>
+</div>
+
 <style lang="css" itemscope>
 	#sidebar {
 		visibility: hidden;
 		transform: translateX(-100%);
 	}
+
 	#sidebar.isActive {
 		visibility: visible;
 		transform: translateX(0%);
+	}
+
+	#overlaySidebar {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	#overlaySidebar.isActive {
+		visibility: visible;
+		opacity: 1;
 	}
 
 	@media (min-width: 64rem) {
@@ -60,3 +78,10 @@ const menus = [MENUS.main, MENUS.social]
 		}
 	}
 </style>
+
+<script is:inline>
+	function sideToggle() {
+		document.getElementById('sidebar')?.classList.toggle('isActive')
+		document.getElementById('overlaySidebar')?.classList.toggle('isActive')
+	}
+</script>

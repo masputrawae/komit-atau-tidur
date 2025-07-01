@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../components/BaseLayout.astro'
+import ListProjects from '../components/ListProjects.astro'
+import Prose from '../components/Prose.astro'
+
+import { Content, frontmatter } from '../content/Projects.md'
+import { getPosts } from '../utils'
+
+const projects = await getPosts("Projects", 2)
+---
+
+<BaseLayout>
+	<header>
+		<Prose className="prose-em:not-italic">
+			<Content />
+		</Prose>
+	</header>
+  <main class="mt-10">
+    <ListProjects items={projects} />
+  </main>
+</BaseLayout>

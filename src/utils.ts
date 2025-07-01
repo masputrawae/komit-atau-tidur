@@ -5,7 +5,10 @@ const site = import.meta.env.SITE || 'https://example.com'
 const base = import.meta.env.BASE_URL || '/'
 
 // GET POST
-export async function getPosts(type: string | 'Projects' | 'Notes' | 'Series' | 'Publish' | 'All' | 'NotProjects') {
+export async function getPosts(
+	type: string | 'Projects' | 'Notes' | 'Series' | 'Publish' | 'All' | 'NotProjects',
+  limit: number | null = null
+) {
 	const allPosts = await getCollection('vault')
 	let posts
 	if (!type || type === 'All') {
@@ -15,7 +18,9 @@ export async function getPosts(type: string | 'Projects' | 'Notes' | 'Series' | 
 	} else {
 		posts = allPosts.filter((i) => i.data.type === type)
 	}
-  return posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+	const sorted = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+
+  return limit ? sorted.slice(0, limit) : sorted
 }
 
 // TAGS CLOUD
@@ -76,10 +81,26 @@ export function timeFormat(dateInput: string, longDate: boolean) {
 // SET URL ABS or REL
 export function isFileUrl(url: string): boolean {
 	const fileExtensions = [
-		'jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'pdf',
-		'doc','docx','xls','xlsx','zip','rar',
-		'mp3','mp4','ico','webmanifest','json','yaml',
-    'woff2'
+		'jpg',
+		'jpeg',
+		'png',
+		'gif',
+		'webp',
+		'svg',
+		'pdf',
+		'doc',
+		'docx',
+		'xls',
+		'xlsx',
+		'zip',
+		'rar',
+		'mp3',
+		'mp4',
+		'ico',
+		'webmanifest',
+		'json',
+		'yaml',
+		'woff2'
 	]
 
 	const match = url.match(/\.([a-zA-Z0-9]+)(?:\?|#|$)/)

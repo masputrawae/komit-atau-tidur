@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets'
+import { titleWord, relUrl } from '../utils'
+import { Icon } from 'astro-icon/components'
+
+const { items, heading } = Astro.props
+---
+
+{heading && <h2 class="mb-2 text-2xl text-white text-shadow-black text-shadow-sm">{heading}</h2>}
+
+<div id="projectContainer">
+	{
+		items.map((item: any) => {
+			const href = relUrl(`/${item.id}/`)
+			const title = titleWord(item.data.title)
+			const thumbnail = item.data.image
+			const description = item.data.description
+
+			return (
+				<article class="project group">
+					<picture class="project__picture">
+						<Image
+							src={thumbnail}
+							alt={title}
+							width={1920}
+				      height={1080}
+							format="webp"
+							quality="high"
+							layout="full-width"
+							class="project__img"
+						/>
+					</picture>
+					<section class="project__body">
+						<a href={href} class="project__title">
+							{title}
+						</a>
+						<nav class="project__tags">
+							{item.data.tags.map((tag: string) => {
+								const tagTitle = titleWord(tag)
+								const href = relUrl(`/tag/${tag}/`)
+
+								return (
+									<a href={href} class="badge text-xs">
+										{tagTitle}
+									</a>
+								)
+							})}
+						</nav>
+						<p class="project__description">{description}</p>
+						<button class="btn">View Projects</button>
+					</section>
+				</article>
+			)
+		})
+	}
+</div>
+
+<script is:inline>
+	document.getElementById('projectContainer').addEventListener('click', e => {
+		if (e.target.tagName === 'BUTTON') {
+			const article = e.target.closest('article')
+			const link = article.querySelector('a')
+			if (link) link.click()
+		}
+	})
+</script>

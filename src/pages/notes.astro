@@ -1,0 +1,28 @@
+---
+import Alphabetical from '../components/Alphabetical.astro'
+import BaseLayout from '../components/BaseLayout.astro'
+import ListNotes from '../components/ListNotes.astro'
+import ListSeries from '../components/ListSeries.astro'
+import Prose from '../components/Prose.astro'
+import TagCloud from '../components/TagCloud.astro'
+
+import { Content, frontmatter } from '../content/Notes.md'
+import { getPosts } from '../utils'
+
+const series = await getPosts('Series')
+---
+
+<BaseLayout>
+	<header>
+    <ListSeries items={series} />
+    <TagCloud />
+		<Prose className="prose-em:not-italic">
+			<Content />
+		</Prose>
+	</header>
+	<main class="mt-10">
+		<Prose>
+			<Alphabetical />
+		</Prose>
+	</main>
+</BaseLayout>

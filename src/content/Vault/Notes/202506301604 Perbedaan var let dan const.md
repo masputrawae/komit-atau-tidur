@@ -1,5 +1,5 @@
 ---
-unique_id: "202506301604"
+unique_id: '202506301604'
 title: Perbedaan var let dan const
 tags:
   - javascript
@@ -10,9 +10,10 @@ type: Notes
 ---
 
 # Perbedaan var let dan const
+
 ## 🌏 Scope (cakupan)
 
-- `var` memiliki cakupan function dan global, tidak memiliki cakupan blok atau block scope 
+- `var` memiliki cakupan function dan global, tidak memiliki cakupan blok atau block scope
 - `let` dan `const` memiliki function scope dan block scope you ditandai dengan `{}` dan hanya bisa diakses di dalam block variabel nya saja
 
 ## ⤴️ Hoisting

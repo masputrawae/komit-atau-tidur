@@ -1,9 +1,9 @@
 {
-  "types": {
-    "aliases": "aliases",
-    "cssclasses": "multitext",
-    "tags": "tags",
-    "date": "datetime",
-    "update": "datetime"
-  }
+	"types": {
+		"aliases": "aliases",
+		"cssclasses": "multitext",
+		"tags": "tags",
+		"date": "datetime",
+		"update": "datetime"
+	}
 }

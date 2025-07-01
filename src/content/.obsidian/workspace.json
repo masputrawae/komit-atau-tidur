@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "Vault/Projects/Example Project 3.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Home"
+              "title": "Example Project 3"
             }
           }
         ],
@@ -180,27 +180,31 @@
       "canvas:Buat kanvas baru": false,
       "daily-notes:Buka catatan hari ini": false,
       "templates:Masukkan template": false,
-      "command-palette:Buka palet perintah": false
+      "command-palette:Buka palet perintah": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
   "active": "c11830587a477d98",
   "lastOpenFiles": [
-    "About.md",
+    "Vault/Projects/Example Project 2.md",
+    "Vault/Projects/Example Project 3.md",
+    "Templates/Template Publish.md",
+    "Templates/Template Projects.md",
+    "Templates/Template Notes.md",
+    "Templates/Template Index Series.md",
     "Home.md",
+    "About.md",
     "Vault/Series/belajar-javascript-dari-dasar.md",
     "Vault/Series/belajar-python-dari-dasar.md",
     "Vault/Publish/belajar-python-dari-dasar/chapter-02-python-variabel-dan-tipe-data.md",
     "Vault/Publish/belajar-python-dari-dasar/chapter-01-python-Pengenalan.md",
     "Vault/Publish/belajar-javascript-dari-dasar/chapter-01-javascript-pengenalan.md",
     "Vault/Publish/belajar-javascript-dari-dasar/chapter-02-javascript-variabel-dan-tipe-data.md",
-    "Templates/Template Index Series.md",
-    "Templates/Template Publish.md",
     "Vault/Notes/202506301653 Function Di JavaScript.md",
     "Vault/Notes/202506301624 Jenis Jenis Scope Di JavaScript.md",
     "Vault/Notes/202506301604 Perbedaan var let dan const.md",
     "Vault/Notes/202506301247 Alasan let Dan const Lebih Direkomendasikan.md",
     "Vault/Notes/202506301213 Alasan Keyword var Di JavaScript Tidak Direkomendasikan.md",
-    "Templates/Template Notes.md",
     "config.ts",
     "Vault/Publish/belajar-python-dari-dasar/chapter-01-javascript-pengenalan.md",
     "Vault/Publish/belajar-python-dari-dasar/chapter-02-javascript-variabel-dan-tipe-data.md",

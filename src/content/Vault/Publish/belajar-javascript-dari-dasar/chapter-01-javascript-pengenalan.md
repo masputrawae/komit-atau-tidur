@@ -32,7 +32,6 @@ JavaScript adalah bahasa pemrograman yang:
 ## Cara Menjalankan JavaScript
 
 1. **Browser Console**
-
    - Buka DevTools (F12) → tab Console
    - Ketik langsung kode JavaScript
 
@@ -40,7 +39,7 @@ JavaScript adalah bahasa pemrograman yang:
 
    ```html
    <script>
-     console.log('Hello World!')
+   	console.log('Hello World!')
    </script>
    ```
 

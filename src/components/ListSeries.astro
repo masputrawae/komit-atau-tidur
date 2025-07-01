@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets'
+import { relUrl } from '../utils'
+
+const { items } = Astro.props
+---
+
+<nav class="cs-scrollbar mb-10 flex snap-x snap-mandatory overflow-x-auto scroll-smooth">
+	{
+		items.map((item: any) => {
+			const href = relUrl(`/${item.id}/`)
+			const title = item.data.title
+			const image = relUrl(`${item.data.image}`)
+			const description = item.data.description
+			return (
+				<a href={href} class="relative w-full shrink-0 snap-start p-5 md:w-sm lg:w-md">
+					<Image
+						src={image}
+						alt={title}
+						width={1920}
+						height={1080}
+						layout={`constrained`}
+						loading={`eager`}
+						class="aspect-video rounded-2xl shadow-lg shadow-black brightness-[30%]"
+					/>
+					<div class="absolute bottom-0 left-0 p-10 text-shadow-black text-shadow-md">
+						<p class="text-xs text-white">{description}</p>
+						<strong class="text-2xl text-amber-500">{title}</strong>
+					</div>
+				</a>
+			)
+		})
+	}
+</nav>
+
+<style is:inline>
+	.cs-scrollbar {
+		scrollbar-width: thin;
+		scrollbar-color: #2a2a2a #0000004a;
+	}
+</style>

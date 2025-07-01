@@ -1,5 +1,5 @@
 ---
-unique_id: "202506302239"
+unique_id: '202506302239'
 title: Mendeklarasikan Variabel Di JavaScript
 tags:
   - javascript
@@ -12,10 +12,11 @@ type: Notes
 
 # Mendeklarasikan Variabel Di JavaScript
 
-- Buat nama variabel yang deskriptif 
-- Gunakan camelCase untuk nama variabel umum 
+- Buat nama variabel yang deskriptif
+- Gunakan camelCase untuk nama variabel umum
 - Rekomendasi gunakan `let` atau `const`
 - Sebisanya hindari penggunaan `var`
+
 ## Contoh
 
 ```javascript
@@ -24,7 +25,7 @@ let namaModern = 'ES6' // Block scope, bisa diubah
 const PI = 3.14 // Block scope, tidak bisa diubah
 ```
 
-## Penamaan 
+## Penamaan
 
 ```javascript
 // ❌ Contoh Salah
@@ -38,6 +39,7 @@ let namaLengkap = "John Doe"
 let usia = 25
 let isBelajar = true
 ```
+
 ## 🔗 Terkait
 
 - [[202506301247 Alasan let Dan const Lebih Direkomendasikan]]

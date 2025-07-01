@@ -1,6 +1,7 @@
 ---
-const {className} = Astro.props
+const { className } = Astro.props
 ---
-<div class={`prose prose-invert prose-zinc text-sm min-w-full ${className}`}>
-  <slot />
+
+<div class={`prose prose-invert prose-zinc text-sm min-w-full prose-headings:font-normal leading-relaxed prose-a:text-blue-300 prose-a:hover:text-blue-500 ${className}`}>
+	<slot />
 </div>

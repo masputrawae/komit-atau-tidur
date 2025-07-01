@@ -32,7 +32,6 @@ is_active = True  # Boolean
    ```
 
 2. **Numerik**:
-
    - `int` (bilangan bulat)
    - `float` (desimal)
    - `complex` (bilangan kompleks)
@@ -40,7 +39,6 @@ is_active = True  # Boolean
 3. **Boolean**: `bool` (`True`/`False`)
 
 4. **Sequence**:
-
    - `list`: `[1, 2, 3]`
    - `tuple`: `(1, 2, 3)`
 

@@ -1,12 +1,12 @@
 export const SITE = {
-  title: 'Putra Jaya',
-  author: 'Putra Jaya',
-  logo: '/logo.webp',
-  tagline: 'Manusia Biasa',
-  twitter: '@Masputrawae',
-  image: '/default-image.webp',
-  cover: '/default-image.webp',
-  description: 'Ini ruang pribadiku untuk belajar, bereksperimen, dan bersenang-senang',
+	title: 'Putra Jaya',
+	author: 'Putra Jaya',
+	logo: '/logo.webp',
+	tagline: 'Manusia Biasa',
+	twitter: '@Masputrawae',
+	image: '/default-image.webp',
+	cover: '/default-image.webp',
+	description: 'Ini ruang pribadiku untuk belajar, bereksperimen, dan bersenang-senang'
 }
 
 export const MENUS = {

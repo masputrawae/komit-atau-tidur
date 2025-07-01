@@ -1,2 +1,41 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "@tailwindcss/typography";
+
+/* BUTTON */
+.btn {
+	@apply inline-flex w-fit cursor-pointer items-center gap-1.5 rounded-md border border-zinc-700 px-7 py-2.5 font-bold shadow-sm shadow-black transition-colors duration-300 text-shadow-black text-shadow-sm hover:bg-zinc-800 hover:text-white;
+}
+
+.btn--primary {
+	@apply bg-zinc-700;
+}
+
+/* BADGE */
+.badge {
+	@apply inline-flex w-fit cursor-pointer items-center gap-1.5 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-2 font-bold shadow-sm shadow-black transition-colors duration-300 text-shadow-black text-shadow-sm hover:bg-zinc-800 hover:text-white;
+}
+
+/* Project List */
+.project {
+	@apply m-auto grid items-center gap-5 border-t border-t-zinc-700 py-10 md:grid-cols-2 md:gap-5 xl:gap-10;
+}
+
+.project__body {
+	@apply grid items-center gap-5 text-sm leading-relaxed text-zinc-400;
+}
+
+.project__title {
+	@apply flex items-center gap-1.5 text-2xl text-white text-shadow-black text-shadow-sm;
+}
+
+.project__picture {
+	@apply m-auto block aspect-video overflow-hidden rounded-2xl shadow-md shadow-black/70 transition-shadow duration-300 group-hover:shadow-sm;
+}
+
+.project__img {
+	@apply w-full object-contain transition-transform duration-300 ease-initial group-hover:scale-110;
+}
+
+.project__tags {
+	@apply flex items-center gap-2;
+}

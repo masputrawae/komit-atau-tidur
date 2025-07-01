@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+import BaseLayout from '../components/BaseLayout.astro'
+import Prose from '../components/Prose.astro'
+
+import { Content, frontmatter } from '../content/About.md'
+import { absUrl } from '../utils'
+import { SITE } from '../site.config'
+
+const image = absUrl(frontmatter.image)
+const title = SITE.author
+---
+
+<BaseLayout>
+	<header>
+		<picture class="mb-10 block aspect-video overflow-hidden rounded-2xl shadow-md shadow-black">
+			<Image
+				src={image}
+				alt={title}
+				width={1920}
+				height={1080}
+				layout={`constrained`}
+				fit={`fill`}
+			/>
+		</picture>
+		<Prose className="prose-em:not-italic">
+			<Content />
+		</Prose>
+	</header>
+</BaseLayout>

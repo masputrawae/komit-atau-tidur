@@ -1,0 +1,24 @@
+---
+import { Icon } from 'astro-icon/components'
+import { relUrl, tagCloud, titleWord  } from '../utils'
+
+const tags = await tagCloud()
+---
+
+<nav class="flex flex-wrap items-center gap-2 mb-5 py-5 border-y border-zinc-800 border-dashed">
+	{
+		tags.map((tag: any) => {
+			const href = relUrl(`/tag/${tag.tag}`)
+			const title = titleWord(tag.tag)
+			const count = tag.count
+
+			return (
+				<a href={href} class="badge text-xs">
+          {count > 5 && <Icon name="icon-sparkles" class="text-amber-500" />}
+					<span>{title}</span>
+					<span>{count}</span>
+        </a>
+			)
+		})
+	}
+</nav>

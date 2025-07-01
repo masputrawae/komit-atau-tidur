@@ -13,13 +13,10 @@ import MobileHeader from './MobileHeader.astro'
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="block lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-10">
+	<body class="block lg:grid lg:grid-cols-[320px_minmax(0,1fr)]">
 		<Header />
 		<MobileHeader />
-		<div
-			class="container min-h-dvh mt-10 mx-auto"
-			onclick="document.getElementById('sidebar').classList.remove('isActive')"
-		>
+		<div class="container mx-auto mt-10 px-4 lg:px-10 min-h-dvh  scroll-pt-20">
 			<slot />
 			<Footer />
 		</div>

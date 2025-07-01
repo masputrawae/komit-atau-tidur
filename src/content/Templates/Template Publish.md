@@ -1,7 +1,7 @@
 ---
 unique_id: '{{date:YYYYMMDDHHmm}}'
 title: {{title}}
-description: 
+description:
 image:
 tags:
 date: {{date:YYYY-MM-DDTHH:mm:ssZ}}

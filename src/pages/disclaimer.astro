@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../components/BaseLayout.astro'
+import Prose from '../components/Prose.astro'
+
+import { Content, frontmatter } from '../content/About.md'
+---
+
+<BaseLayout>
+	<article>
+		<Prose className="prose-em:not-italic">
+			<Content />
+		</Prose>
+	</article>
+</BaseLayout>

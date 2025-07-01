@@ -1,12 +1,15 @@
 ---
-import Brand from "./Brand.astro";
+import Brand from './Brand.astro'
 
 import { Icon } from 'astro-icon/components'
 ---
-<nav class="sticky flex items-center justify-between px-4 py-2 top-0 border-b-2 border-b-zinc-800 shadow-sm shadow-black z-30 lg:hidden">
-  <Brand />
 
-  <button onclick="document.getElementById('sidebar').classList.add('isActive')">
-    <Icon name="icon-bar-3" class="size-6" />
-  </button>
+<nav
+	class="sticky top-0 z-30 flex items-center justify-between border-b-2 border-b-zinc-800 px-4 py-2 shadow-sm shadow-black lg:hidden bg-zinc-900"
+>
+	<Brand />
+
+	<button onclick="sideToggle()">
+		<Icon name="icon-bar-3" class="size-6" />
+	</button>
 </nav>
