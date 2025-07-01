@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vault/Notes/202506301135 Fungsi map Di JavaScript.md",
+                "file": "Vault/Inbox/202507011717 Rencana Membuat Wiki Sederhana Dengan Astro.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Vault/Notes/202506301135 Fungsi map Di JavaScript.md",
+            "file": "Vault/Inbox/202507011717 Rencana Membuat Wiki Sederhana Dengan Astro.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Vault/Notes/202506301135 Fungsi map Di JavaScript.md",
+            "file": "Vault/Inbox/202507011717 Rencana Membuat Wiki Sederhana Dengan Astro.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +114,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Vault/Notes/202506301135 Fungsi map Di JavaScript.md"
+            "file": "Vault/Inbox/202507011717 Rencana Membuat Wiki Sederhana Dengan Astro.md"
           }
         }
       }
@@ -134,6 +134,11 @@
   },
   "active": "518f1a2cdf4ae816",
   "lastOpenFiles": [
+    "Vault/Notes/202507011226 Fungsi Slice Di JavaScript.md",
+    "Vault/Inbox/202507011717 Rencana Membuat Wiki Sederhana Dengan Astro.md",
+    "Vault/Inbox",
+    "Vault/Tanpa judul.md",
+    "Vault/Notes/202506301135 Fungsi map Di JavaScript.md",
     "Vault/Notes/202506121143 Operasi Aritmatika Di Python.md",
     "Vault/unsorted/20250627234640 Asynchronous Di JavaScript.md",
     "Vault/Notes/202506271654 Logical AND Operator di JavaScript.md",
@@ -155,11 +160,7 @@
     "Vault/Notes/202506301213 Alasan Keyword var Di JavaScript Tidak Direkomendasikan.md",
     "Vault/Notes/202506200706 Strict Mode Di JavaScript.md",
     "Vault/Notes/202506200700 Variabel Tanpa Keyword Di JavaScript.md",
-    "Fungsi Slice Di JavaScript.md",
     "Vault/Usang/20250615144253 Fungsi Slice Di JavaScript.md",
-    "Vault/Notes/202507011147 Array Di JavaScript.md",
-    "Vault/Notes/202506141210 Mengelola Isi Kepala Di Obsidian.md",
-    "Vault/Reference/Menampilkan Output Di JavaScript.md",
     "Vault/Reference",
     "Vault/Projects"
   ]

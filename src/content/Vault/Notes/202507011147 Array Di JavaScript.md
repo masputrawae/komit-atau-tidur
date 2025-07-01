@@ -63,5 +63,5 @@ Array adalah struktur data seperti rak yang menyimpan banyak data (dalam urutan)
 - [[Fungsi map Di JavaScript]]
 - [[Fungsi filter Di JavaScrip]]
 - [[Fungsi reduce Di JavaScript]]
-- [[Fungsi Slice Di JavaScript]]
+- [[202507011226 Fungsi Slice Di JavaScript]]
 

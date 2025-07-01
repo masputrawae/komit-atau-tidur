@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiBookImage",
+      "LiInbox",
       "LiActivity",
       "LiBookCopy",
-      "LiSquareKanban",
-      "LiCode2",
-      "LiListOrdered"
+      "LiSquareKanban"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -43,5 +43,7 @@
   "Vault/Publish/belajar-python-dari-dasar": "LiCode2",
   "Vault/Projects": "LiSquareKanban",
   "Vault/Reference": "LiBookCopy",
-  "Vault/unsorted": "LiActivity"
+  "Vault/unsorted": "LiActivity",
+  "Vault/Inbox": "LiInbox",
+  "Images": "LiBookImage"
 }
