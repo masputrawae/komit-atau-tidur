@@ -9,6 +9,8 @@ tags:
 type: Notes
 ---
 
+![Test Gambar](../../Images/memes/meme1.jpg)
+
 # Tipe Data Di Python
 
 ## String (str)

@@ -14,7 +14,7 @@ const tags = await tagCloud()
 
 			return (
 				<a href={href} class="badge text-xs">
-					{count > 5 && <Icon name="icon-sparkles" class="text-amber-500" />}
+					{count > 20 && <Icon name="icon-sparkles" class="text-amber-500" />}
 					<span>{title}</span>
 					<span>{count}</span>
 				</a>

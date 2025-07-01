@@ -12,7 +12,7 @@ const vault = defineCollection({
 		description: z.string().optional(),
 		image: z.string().optional(),
 
-		type: z.enum(['Series', 'Publish', 'Projects', 'Notes']).optional()
+		type: z.enum(['Series', 'Publish', 'Projects', 'Notes', 'References']).optional()
 	})
 })
 

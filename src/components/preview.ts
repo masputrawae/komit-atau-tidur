@@ -22,7 +22,7 @@ function hideLinkPreview() {
 		currentHref = ''
 		tooltip.style.display = ''
 		hidePreviewTimer = undefined
-	}, 200)
+	}, 500)
 }
 
 function clearTimers() {

@@ -6,6 +6,10 @@
 	--font-mono: 'Fira Code', monospace;
 }
 
+.broken-link {
+  @apply text-red-400 cursor-not-allowed;
+}
+
 /* BUTTON */
 .btn {
 	@apply inline-flex w-fit cursor-pointer items-center gap-1.5 rounded-md border border-zinc-700 px-7 py-2.5 font-bold shadow-sm shadow-black transition-colors duration-300 text-shadow-black text-shadow-sm hover:bg-zinc-800 hover:text-white;

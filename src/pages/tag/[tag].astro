@@ -33,9 +33,9 @@ const meta = {
 ---
 
 <BaseLayout>
-	<header></header>
-	<main class="mt-10">
-		<Prose>
+	<main>
+    <Prose>
+      <h1>{`Tag: ${tagTitle} | total: ${tagCount}`}</h1>
 			<Alphabetical docs={filtered} />
 		</Prose>
 	</main>
