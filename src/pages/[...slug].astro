@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from 'astro'
+import { getPosts } from '../utils'
+import { render } from 'astro:content'
+import BaseLayout from '../components/BaseLayout.astro'
+import Prose from '../components/Prose.astro'
+
+export const getStaticPaths = (async () => {
+	const allPosts = await getPosts('All')
+
+	return [...allPosts.map(entry => ({ params: { slug: entry.id }, props: { entry: entry } }))]
+}) satisfies GetStaticPaths
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+---
+
+<BaseLayout>
+	<article>
+		<Prose className="dark">
+			<Content />
+		</Prose>
+	</article>
+</BaseLayout>

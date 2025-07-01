@@ -10,6 +10,7 @@
 		"prettier": "pnpm exec prettier . --write"
 	},
 	"dependencies": {
+		"@r4ai/remark-callout": "^0.6.2",
 		"@tailwindcss/vite": "^4.1.11",
 		"astro": "^5.10.1",
 		"astro-icon": "^1.1.5",
