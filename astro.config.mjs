@@ -11,7 +11,7 @@ import brainDbAstro, { generateSlug } from '@braindb/astro'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://masputrawae.github.io',
-	base: '/',
+	base: '/komit-atau-tidur/',
 	trailingSlash: 'always',
 
 	vite: {
@@ -21,7 +21,7 @@ export default defineConfig({
 	integrations: [
 		brainDbAstro({
 			root: 'src/content/Vault',
-			source: '/komit-atau-tidur/',
+			source: '/',
 			remarkWikiLink: true,
 			git: false,
 			url: (filePath, frontmatter) => {
