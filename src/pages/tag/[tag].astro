@@ -1,0 +1,42 @@
+---
+// src/pages/[tag].astro
+
+import type { GetStaticPaths } from 'astro'
+
+import { titleWord, tagCloud, getPosts, timeFormat } from '../../utils'
+import BaseLayout from '../../components/BaseLayout.astro'
+import Prose from '../../components/Prose.astro'
+import Alphabetical from '../../components/Alphabetical.astro'
+
+export const getStaticPaths = (async () => {
+	const allTags = await tagCloud()
+
+	return [
+		...allTags.map((tag) => ({
+			params: { tag: tag.tag },
+			props: { tag: tag }
+		}))
+	]
+}) satisfies GetStaticPaths
+
+const { tag } = Astro.props
+const allPosts = await getPosts('All')
+const filtered = allPosts?.filter((post) => post.data.tags.includes(tag.tag))
+
+const tagTitle = titleWord(tag.tag)
+const tagCount = tag.count
+const dateNow = new Date().toISOString()
+const meta = {
+	title: tagTitle,
+	description: `Semua Catatan dengan tag: ${tagTitle} total catatan ada: ${tagCount}, per: ${timeFormat(dateNow, true)}`
+}
+---
+
+<BaseLayout>
+	<header></header>
+	<main class="mt-10">
+		<Prose>
+			<Alphabetical docs={filtered} />
+		</Prose>
+	</main>
+</BaseLayout>

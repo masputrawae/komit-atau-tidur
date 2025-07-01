@@ -9,7 +9,7 @@ import { relUrl, getPosts } from '../utils'
 
 const cta = MENUS.cta
 
-const projects = await getPosts("Projects", 2)
+const projects = await getPosts('Projects', 2)
 ---
 
 <BaseLayout>
@@ -17,15 +17,17 @@ const projects = await getPosts("Projects", 2)
 		<Prose className="prose-em:not-italic">
 			<Content />
 		</Prose>
-    <nav class="flex items-center gap-2 mt-6">
-      {
-        cta.map(item =>(
-          <a href={relUrl(item.href)} class={`btn ${item.primary ? 'btn--primary' : ''}`}>{item.label}</a>
-        ))
-      }
-    </nav>
+		<nav class="mt-6 flex items-center gap-2">
+			{
+				cta.map((item) => (
+					<a href={relUrl(item.href)} class={`btn ${item.primary ? 'btn--primary' : ''}`}>
+						{item.label}
+					</a>
+				))
+			}
+		</nav>
 	</header>
-  <main class="mt-10">
-    <ListProjects items={projects} heading="Last Projects" />
-  </main>
+	<main class="mt-10">
+		<ListProjects items={projects} heading="Last Projects" />
+	</main>
 </BaseLayout>

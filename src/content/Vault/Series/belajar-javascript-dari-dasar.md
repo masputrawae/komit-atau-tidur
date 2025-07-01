@@ -16,12 +16,12 @@ type: Series
 
 ## Daftar Chapter
 
-1. [Chapter 1 - JavaScript: Pengenalan](../Publish/belajar-javascript-dari-dasar/chapter-01-javascript-pengenalan.md)
+1. [[chapter-01-javascript-pengenalan]]
    - Pengenalan bahasa JavaScript
    - Sejarah dan ekosistem
    - Cara menjalankan kode JavaScript
 
-2. [Chapter 2 - JavaScript: Variabel dan Tipe Data](../Publish/belajar-javascript-dari-dasar/chapter-02-javascript-variabel-dan-tipe-data.md)
+2. [[chapter-02-javascript-variabel-dan-tipe-data]]
    - Deklarasi variabel (let, const, var)
    - 7 tipe data primitif
    - Type conversion dan operator

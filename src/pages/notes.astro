@@ -10,19 +10,20 @@ import { Content, frontmatter } from '../content/Notes.md'
 import { getPosts } from '../utils'
 
 const series = await getPosts('Series')
+const notes = await getPosts('Notes')
 ---
 
 <BaseLayout>
 	<header>
-    <ListSeries items={series} />
-    <TagCloud />
+		<ListSeries items={series} />
+		<TagCloud />
 		<Prose className="prose-em:not-italic">
 			<Content />
 		</Prose>
 	</header>
 	<main class="mt-10">
 		<Prose>
-			<Alphabetical />
+			<Alphabetical docs={notes} />
 		</Prose>
 	</main>
 </BaseLayout>

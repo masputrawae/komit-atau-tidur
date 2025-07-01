@@ -1,0 +1,29 @@
+---
+import Prose from './Prose.astro'
+---
+
+<Prose>
+	<div id="linkpreview" role="tooltip"></div>
+</Prose>
+<style>
+	#linkpreview {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 400px;
+		max-height: 400px;
+		overflow: auto;
+		z-index: var(--sl-z-index-skiplink);
+		border: 2px solid var(--color-zinc-700);
+		border-radius: 0.5rem;
+		padding: 1rem;
+		box-shadow: var(--sl-shadow-md);
+		background-color: var(--color-zinc-800);
+		z-index: 99999;
+		scrollbar-width: thin;
+	}
+</style>
+<script>
+	import './preview.ts'
+</script>

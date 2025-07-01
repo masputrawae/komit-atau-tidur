@@ -10,6 +10,10 @@
 		"prettier": "pnpm exec prettier . --write"
 	},
 	"dependencies": {
+		"@braindb/astro": "^0.1.1",
+		"@braindb/core": "^0.0.17",
+		"@braindb/remark-wiki-link": "^2.1.0",
+		"@floating-ui/dom": "^1.7.2",
 		"@r4ai/remark-callout": "^0.6.2",
 		"@tailwindcss/vite": "^4.1.11",
 		"astro": "^5.10.1",

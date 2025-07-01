@@ -1,13 +1,12 @@
 ---
-import { Icon } from 'astro-icon/components'
 import { getPosts, relUrl } from '../utils'
 
 const firstChar = (str: string) => String.fromCodePoint(str.codePointAt(0)!)
 
-const docs = await getPosts('Notes')
+const { docs } = Astro.props
 type Docs = typeof docs
 const docsByChar = new Map<string, Docs>()
-docs.forEach(doc => {
+docs.forEach((doc: any) => {
 	const char = firstChar(doc.data.title).toUpperCase()
 	docsByChar.set(char, docsByChar.get(char) || [])
 	docsByChar.get(char)?.push(doc)
@@ -18,11 +17,11 @@ const charsSorted = [...docsByChar.keys()].sort(comparator.compare)
 
 <div class="columns-1 md:columns-2 lg:columns-1 xl:columns-2">
 	{
-		charsSorted.map(char => (
+		charsSorted.map((char) => (
 			<nav>
-				<strong class="border-b border-dashed border-zinc-800 flex">{char}</strong>
+				<strong class="flex border-b border-dashed border-zinc-800">{char}</strong>
 				<ul>
-					{docsByChar.get(char)?.map(doc => (
+					{docsByChar.get(char)?.map((doc: any) => (
 						<li>
 							<a href={relUrl(`/${doc.id}/`)}>{doc.data.title}</a>
 						</li>

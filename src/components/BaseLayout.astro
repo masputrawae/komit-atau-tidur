@@ -3,6 +3,7 @@ import '../styles/global.css'
 
 import Footer from './Footer.astro'
 import Header from './Header.astro'
+import LinkPreview from './LinkPreview.astro'
 import MobileHeader from './MobileHeader.astro'
 ---
 
@@ -16,9 +17,10 @@ import MobileHeader from './MobileHeader.astro'
 	<body class="block lg:grid lg:grid-cols-[320px_minmax(0,1fr)]">
 		<Header />
 		<MobileHeader />
-		<div class="container mx-auto mt-10 px-4 lg:px-10 min-h-dvh  scroll-pt-20">
+		<div class="container mx-auto mt-10 min-h-dvh scroll-pt-20 px-4 lg:px-10">
 			<slot />
 			<Footer />
 		</div>
 	</body>
 </html>
+<LinkPreview />

@@ -20,9 +20,9 @@ const menus = [MENUS.main, MENUS.social]
 	</nav>
 
 	{
-		menus.map(menu => (
+		menus.map((menu) => (
 			<nav class="flex flex-col">
-				{menu.map(item => {
+				{menu.map((item) => {
 					const { pathname } = Astro.url
 					const href = relUrl(item.href)
 					const label = item.label
@@ -46,7 +46,7 @@ const menus = [MENUS.main, MENUS.social]
 <div
 	onclick="sideToggle()"
 	id="overlaySidebar"
-	class="fixed z-40 size-full lg:hidden bg-zinc-950/90 transition-all duration-300"
+	class="fixed z-40 size-full bg-zinc-950/90 transition-all duration-300 lg:hidden"
 >
 </div>
 

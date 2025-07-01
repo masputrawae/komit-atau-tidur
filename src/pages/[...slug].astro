@@ -8,7 +8,7 @@ import Prose from '../components/Prose.astro'
 export const getStaticPaths = (async () => {
 	const allPosts = await getPosts('All')
 
-	return [...allPosts.map(entry => ({ params: { slug: entry.id }, props: { entry: entry } }))]
+	return [...allPosts.map((entry) => ({ params: { slug: entry.id }, props: { entry: entry } }))]
 }) satisfies GetStaticPaths
 
 const { entry } = Astro.props

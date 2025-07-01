@@ -16,4 +16,3 @@ Saya membuat proyek-proyek ini untuk bersenang-senang, bereksperimen, dan mengas
 ---
 
 Catatan: Semua proyek di sini masih dalam tahap belajar. Kalau ada yang menarik atau ingin memberi masukan, saya akan sangat menghargainya!
-

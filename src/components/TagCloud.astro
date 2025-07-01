@@ -1,11 +1,11 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { relUrl, tagCloud, titleWord  } from '../utils'
+import { relUrl, tagCloud, titleWord } from '../utils'
 
 const tags = await tagCloud()
 ---
 
-<nav class="flex flex-wrap items-center gap-2 mb-5 py-5 border-y border-zinc-800 border-dashed">
+<nav class="mb-5 flex flex-wrap items-center gap-2 border-y border-dashed border-zinc-800 py-5">
 	{
 		tags.map((tag: any) => {
 			const href = relUrl(`/tag/${tag.tag}`)
@@ -14,10 +14,10 @@ const tags = await tagCloud()
 
 			return (
 				<a href={href} class="badge text-xs">
-          {count > 5 && <Icon name="icon-sparkles" class="text-amber-500" />}
+					{count > 5 && <Icon name="icon-sparkles" class="text-amber-500" />}
 					<span>{title}</span>
 					<span>{count}</span>
-        </a>
+				</a>
 			)
 		})
 	}

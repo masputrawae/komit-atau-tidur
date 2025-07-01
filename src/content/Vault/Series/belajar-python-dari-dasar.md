@@ -16,12 +16,12 @@ type: Series
 
 ## **Daftar Chapter**
 
-1. [Chapter 1 - Python: Pengenalan](../Publish/belajar-python-dari-dasar/chapter-01-python-Pengenalan.md)
+1. [[chapter-01-python-Pengenalan]]
    - Pengenalan bahasa Python
    - Instalasi dan tools
    - Program pertama
 
-2. [Chapter 2 - Variabel dan Tipe Data](../Publish/belajar-python-dari-dasar/chapter-02-python-variabel-dan-tipe-data.md)
+2. [[chapter-02-python-variabel-dan-tipe-data]]
    - Deklarasi variabel
    - Tipe data primitif
    - Operator dasar

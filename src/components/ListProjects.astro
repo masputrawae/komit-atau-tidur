@@ -23,7 +23,7 @@ const { items, heading } = Astro.props
 							src={thumbnail}
 							alt={title}
 							width={1920}
-				      height={1080}
+							height={1080}
 							format="webp"
 							quality="high"
 							layout="full-width"
@@ -56,7 +56,7 @@ const { items, heading } = Astro.props
 </div>
 
 <script is:inline>
-	document.getElementById('projectContainer').addEventListener('click', e => {
+	document.getElementById('projectContainer').addEventListener('click', (e) => {
 		if (e.target.tagName === 'BUTTON') {
 			const article = e.target.closest('article')
 			const link = article.querySelector('a')

@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL || '/'
 // GET POST
 export async function getPosts(
 	type: string | 'Projects' | 'Notes' | 'Series' | 'Publish' | 'All' | 'NotProjects',
-  limit: number | null = null
+	limit: number | null = null
 ) {
 	const allPosts = await getCollection('vault')
 	let posts
@@ -20,7 +20,7 @@ export async function getPosts(
 	}
 	const sorted = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
 
-  return limit ? sorted.slice(0, limit) : sorted
+	return limit ? sorted.slice(0, limit) : sorted
 }
 
 // TAGS CLOUD
