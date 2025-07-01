@@ -2,7 +2,9 @@ import { computePosition, autoPlacement, offset } from '@floating-ui/dom'
 
 const tooltip = document.querySelector('#linkpreview') as HTMLElement
 
-const elements = document.querySelectorAll('a') as NodeListOf<HTMLAnchorElement>
+const elements = document.querySelectorAll(
+	'.sl-markdown-content a'
+) as NodeListOf<HTMLAnchorElement>
 
 // response may arrive after cursor left the link
 let currentHref: string
