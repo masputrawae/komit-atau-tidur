@@ -50,7 +50,6 @@ console.log(sapa('Eko')) // Output: Hai Eko Bagaimana Kabarnya?
 
 ## 🔗 Terkait
 
-- [[Alasan Perlu Function]]
 - [[Return Di JavaScript]]
 - [[Arrow Function Di JavaScript]]
 - [[Function Expression Di JavaScript]]

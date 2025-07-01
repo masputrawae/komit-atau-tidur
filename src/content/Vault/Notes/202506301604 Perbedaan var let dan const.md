@@ -32,3 +32,4 @@ type: Notes
 - [[202506301213 Alasan Keyword var Di JavaScript Tidak Direkomendasikan]]
 - [[Apa Itu Hoisting]]
 - [[202506301624 Jenis Jenis Scope Di JavaScript]]
+- [[202507011158 Perilaku var let dan const di JavaScript]]
