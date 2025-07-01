@@ -22,7 +22,8 @@ const { items, heading } = Astro.props
 						<Image
 							src={thumbnail}
 							alt={title}
-							width={1920}
+              inferSize={true}
+              width={1920}
 							height={1080}
 							format="webp"
 							quality="high"

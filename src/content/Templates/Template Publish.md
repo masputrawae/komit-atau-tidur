@@ -1,6 +1,6 @@
 ---
 unique_id: '{{date:YYYYMMDDHHmm}}'
-title: {{title}}
+title: '{{title}}'
 description:
 image:
 tags:

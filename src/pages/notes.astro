@@ -1,7 +1,7 @@
 ---
 import Alphabetical from '../components/Alphabetical.astro'
 import BaseLayout from '../components/BaseLayout.astro'
-import ListNotes from '../components/ListNotes.astro'
+import Search from 'astro-pagefind/components/Search'
 import ListSeries from '../components/ListSeries.astro'
 import Prose from '../components/Prose.astro'
 import TagCloud from '../components/TagCloud.astro'
@@ -20,6 +20,7 @@ const notes = await getPosts('Notes')
 		<Prose className="prose-em:not-italic">
 			<Content />
 		</Prose>
+    <Search id="search" className="pagefind-ui my-4" uiOptions={{ showImages: true }} />
 	</header>
 	<main class="mt-10">
 		<Prose>

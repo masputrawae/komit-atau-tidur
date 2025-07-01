@@ -11,7 +11,7 @@ const image = Object.values(imageFiles)
 			image.map((img: any) => (
 				<Image
 					src={img.default}
-					width="600"
+					inferSize={true}
 					alt="Image"
 					class="gallery-img mb-3 w-full cursor-zoom-in rounded-md shadow-sm shadow-black"
 					onclick="lightBox(this)"

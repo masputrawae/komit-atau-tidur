@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
+import { defineConfig, passthroughImageService } from 'astro/config'
 
 import tailwindcss from '@tailwindcss/vite'
 
@@ -7,6 +7,9 @@ import icon from 'astro-icon'
 
 import remarkCallout from '@r4ai/remark-callout'
 import brainDbAstro, { generateSlug } from '@braindb/astro'
+import pagefind from 'astro-pagefind'
+
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,6 +17,11 @@ export default defineConfig({
 	base: '/komit-atau-tidur/',
 	trailingSlash: 'always',
 
+	image: {
+		domains: ['astro.build'],
+		remotePatterns: [{ protocol: 'https' }],
+		service: passthroughImageService()
+	},
 	vite: {
 		plugins: [tailwindcss()]
 	},
@@ -30,7 +38,9 @@ export default defineConfig({
 				return `/komit-atau-tidur/${cleanSlug}/`
 			}
 		}),
-		icon()
+		icon(),
+		pagefind(),
+		sitemap()
 	],
 
 	markdown: {

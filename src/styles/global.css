@@ -6,8 +6,46 @@
 	--font-mono: 'Fira Code', monospace;
 }
 
+/* Search */
+.pagefind-ui {
+	--pagefind-ui-scale: 0.75;
+	--pagefind-ui-primary: white;
+	--pagefind-ui-text: white;
+	--pagefind-ui-border: var(--color-zinc-800);
+	--pagefind-ui-background: rgba(0, 0, 0, 0.1);
+	--pagefind-ui-border-width: 1px;
+	--pagefind-ui-border-radius: 0.25rem;
+	--pagefind-ui-font: var(--font-sans);
+
+	width: 100%;
+	margin-top: 1rem;
+  @apply shadow-sm shadow-black;
+}
+
+.pagefind-ui .pagefind-ui__drawer:not(.pagefind-ui__hidden) {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 0px;
+	z-index: 9999;
+	padding: 0 2em 1em;
+	overflow-y: auto;
+	border-bottom-right-radius: var(--pagefind-ui-border-radius);
+	border-bottom-left-radius: var(--pagefind-ui-border-radius);
+	background-color: var(--color-zinc-800);
+}
+
+.pagefind-ui .pagefind-ui__result-link {
+	color: var(--color-blue-500);
+}
+
+.pagefind-ui .pagefind-ui__result-excerpt {
+	color: var(--color-neutral-300);
+}
+
+/* Broken Link */
 .broken-link {
-  @apply text-red-400 cursor-not-allowed;
+	@apply cursor-not-allowed text-red-500;
 }
 
 /* BUTTON */

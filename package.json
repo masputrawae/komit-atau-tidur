@@ -10,6 +10,7 @@
 		"prettier": "pnpm exec prettier . --write"
 	},
 	"dependencies": {
+		"@astrojs/sitemap": "^3.4.1",
 		"@braindb/astro": "^0.1.1",
 		"@braindb/core": "^0.0.17",
 		"@braindb/remark-wiki-link": "^2.1.0",
@@ -18,6 +19,7 @@
 		"@tailwindcss/vite": "^4.1.11",
 		"astro": "^5.10.1",
 		"astro-icon": "^1.1.5",
+		"astro-pagefind": "^1.8.3",
 		"prettier": "^3.6.2",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-tailwindcss": "^0.6.13",
