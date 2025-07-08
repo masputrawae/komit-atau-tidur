@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../assets/layouts/BaseLayout.astro'
+import ContentLayout from '../assets/layouts/ContentLayout.astro'
+
+import { getCollection } from 'astro:content'
+import { render } from 'astro:content'
+import type { GetStaticPaths } from 'astro'
+
+export const getStaticPaths = (async () => {
+	const docs = await getCollection('docs')
+
+	return [
+		...docs.map(entry => ({
+			params: { slug: entry.id },
+			props: { entry }
+		}))
+	]
+}) satisfies GetStaticPaths
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+---
+
+<BaseLayout>
+	<div class="-ml-[1px]">
+		<ContentLayout>
+			<div slot="readTab">
+				<Content />
+			</div>
+
+			<div slot="historyTab">
+				<p>Histori Nanti Ada</p>
+			</div>
+		</ContentLayout>
+	</div>
+</BaseLayout>

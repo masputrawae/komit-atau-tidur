@@ -1,0 +1,63 @@
+---
+import TopBar from './TopBar.astro'
+
+import { getCollection } from 'astro:content'
+import { relUrl } from '../utils/url'
+import { SIDEBAR } from '../../sidebar.config'
+
+const docs = await getCollection('docs')
+const docsWithSidebar = docs.filter(doc => doc.data.sidebar)
+
+const sidebarItemsFromDocs = docsWithSidebar.map(doc => ({
+	href: relUrl(doc.id),
+	title: doc.data.title,
+	order: doc.data.sidebar?.order || 0,
+	group: doc.data.sidebar?.group || null
+}))
+
+const sidebar = SIDEBAR.map(item => {
+	const itemInGroup = sidebarItemsFromDocs
+		.filter(doc => doc.group === item.id)
+		.sort((a, b) => a.order - b.order)
+
+	return {
+		label: item.label,
+		order: item.order,
+		items: itemInGroup
+	}
+}).sort((a, b) => a.order - b.order)
+---
+
+<header
+	id="sidebar"
+	class="invisible fixed top-0 left-0 z-50 flex h-dvh w-2xs -translate-x-full flex-col gap-5 border-r border-r-zinc-800 bg-zinc-900 p-4 shadow-sm shadow-black transition-all duration-300 lg:translate-none lg:visible lg:sticky lg:shadow-none"
+>
+	<TopBar inSidebar={true} />
+	{
+		sidebar.map(group => (
+			<nav class="flex flex-col gap-1">
+				<strong class="my-2 border-b border-zinc-800 pb-1 text-shadow-sm text-shadow-black">{group.label}</strong>
+				{group.items.map(item => {
+					const { pathname } = Astro.url
+					const isActive = pathname === item.href
+
+					return (
+						<a
+							href={item.href}
+							class="ml-2 text-shadow-sm text-shadow-black"
+							class:list={isActive ? 'text-white' : 'text-zinc-400 hover:text-white'}
+						>
+							{item.title}
+						</a>
+					)
+				})}
+			</nav>
+		))
+	}
+</header>
+<style>
+  @reference '../styles/global.css';
+	#sidebar.isActive {
+    @apply translate-none visible;
+	}
+</style>

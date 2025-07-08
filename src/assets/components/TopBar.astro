@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components'
+import { SITE_PARAMS } from '../../site.config'
+import { Image } from 'astro:assets'
+import { relUrl } from '../utils/url'
+
+const { inSidebar = false } = Astro.props
+
+const SITE_URL = import.meta.env.SITE
+const BASE_URL = import.meta.env.BASE_URL
+
+const title = SITE_PARAMS.title
+const tagline = SITE_PARAMS.tagline
+const href = `${SITE_URL}${BASE_URL}`
+const logo = relUrl(SITE_PARAMS.logo)
+---
+
+<nav
+	class="flex items-center justify-between"
+	class:list={inSidebar
+		? ''
+		: 'z-40 sticky top-0 border-b border-zinc-800 bg-zinc-900 px-4 py-2 shadow-sm shadow-black lg:hidden'}
+>
+	<a href={href} class="flex items-center gap-2">
+		<Image
+			src={logo}
+			alt={`Logo ${title}`}
+			width={58}
+			height={58}
+			quality={`high`}
+			class="rounded-full border-2 border-zinc-900 shadow-sm shadow-black"
+		/>
+		<p class="flex flex-col text-shadow-black text-shadow-md">
+			<strong class="text-lg text-white">{title}</strong>
+			<em class="text-xs text-zinc-400 not-italic">{tagline}</em>
+		</p>
+	</a>
+
+	<button data-sidebar-target>
+		<Icon name={inSidebar ? 'icon-x-mark' : 'icon-bar-3'} class="text-white size-6" />
+	</button>
+</nav>
