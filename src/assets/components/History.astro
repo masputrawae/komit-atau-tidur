@@ -1,64 +1,60 @@
 ---
-import { getCollection } from "astro:content"
-import { SITE_PARAMS } from "../../site.config"
+import { getCollection } from 'astro:content'
+import { SITE_PARAMS } from '../../site.config'
 
 const { entry } = Astro.props
 const histories = await getCollection('historyOnGit')
 const filterHistory = histories.filter(history => history.id === entry.filePath)
 ---
 
-<div class="px-2 lg:px-4 xl:px-8">
-	<article class="markdown min-h-dvh border border-zinc-800 px-2 lg:px-4 xl:px-8">
-		{
-			filterHistory.map(history => (
-				<>
-					<h2 class="mt-8 mb-4">
-						File Path: <code>{history.id}</code>
-					</h2>
+{
+	filterHistory.map(history => (
+		<>
+			<h3 class="mt-8 mb-4">
+				File Path: <code>{history.id}</code>
+			</h3>
 
-					<ol class="relative border-l border-zinc-700">
-						{history.data.map(item => (
-							<li class="mb-10 ml-6">
-								<span class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-sky-500 ring-8 ring-zinc-900" />
+			<ol class="relative border-l border-zinc-700">
+				{history.data.map(item => (
+					<li class="mb-10 ml-6">
+						<span class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-sky-500 ring-8 ring-zinc-900" />
 
-								<time class="mb-1 text-sm leading-none font-normal text-zinc-400">
-									{new Date(item.date).toLocaleString()}
-								</time>
+						<time class="mb-1 text-sm leading-none font-normal text-zinc-400"  datetime={new Date(item.date).toISOString()}>
+							{new Date(item.date).toLocaleString()}
+						</time>
 
-								<h3 class="text-lg font-semibold text-white">{item.message}</h3>
+						<h3 class="text-lg font-semibold text-white">{item.message}</h3>
 
-								<div class="mt-2 grid gap-1 text-sm text-zinc-300">
-									<div>
-										<strong>Author:</strong> {item.author.name} (
-										<a href={`mailto:${item.author.email}`} class="text-sky-400 underline">
-											{item.author.email}
-										</a>
-										)
-									</div>
-									<div>
-										<strong>Committer:</strong> {item.committer.name} (
-										<a href={`mailto:${item.committer.email}`} class="text-sky-400 underline">
-											{item.committer.email}
-										</a>
-										)
-									</div>
-								</div>
-
-								<p class="mt-2 text-sm text-zinc-400">{item.diff}</p>
-
-								<a
-									href={`https://github.com/${SITE_PARAMS.repo}/blob/${item.hash}/${history.id}`}
-									class="mt-1 inline-block break-all text-sky-400 underline"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									View on GitHub
+						<div class="mt-2 grid gap-1 text-sm text-zinc-300">
+							<div>
+								<strong>Author:</strong> {item.author.name} (
+								<a href={`mailto:${item.author.email}`} class="text-sky-400 underline">
+									{item.author.email}
 								</a>
-							</li>
-						))}
-					</ol>
-				</>
-			))
-		}
-	</article>
-</div>
+								)
+							</div>
+							<div>
+								<strong>Committer:</strong> {item.committer.name} (
+								<a href={`mailto:${item.committer.email}`} class="text-sky-400 underline">
+									{item.committer.email}
+								</a>
+								)
+							</div>
+						</div>
+
+						<p class="mt-2 text-sm text-zinc-400">{item.diff}</p>
+
+						<a
+							href={`https://github.com/${SITE_PARAMS.repo}/blob/${item.hash}/${history.id}`}
+							class="mt-1 inline-block break-all text-sky-400 underline"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							View on GitHub
+						</a>
+					</li>
+				))}
+			</ol>
+		</>
+	))
+}

@@ -36,7 +36,7 @@ const logo = relUrl(SITE_PARAMS.logo)
 		</p>
 	</a>
 
-	<button data-sidebar-target>
+	<button data-sidebar-target class:list={inSidebar ? 'lg:hidden' : ''}>
 		<Icon name={inSidebar ? 'icon-x-mark' : 'icon-bar-3'} class="text-white size-6" />
 	</button>
 </nav>

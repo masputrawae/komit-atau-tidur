@@ -120,7 +120,7 @@ const viewSourceHref = `${githubUrl}/${SITE_PARAMS.repo}/blob/${SITE_PARAMS.bran
 		}
 
 		.tab-control__btn--active {
-			@apply border-b-zinc-900 bg-linear-to-t from-zinc-900 to-zinc-900;
+			@apply border-b-zinc-900 bg-linear-to-t from-zinc-900 to-zinc-900 text-white;
 		}
 
 		/* TAB CONTROL DROPDOWN */
@@ -129,7 +129,7 @@ const viewSourceHref = `${githubUrl}/${SITE_PARAMS.repo}/blob/${SITE_PARAMS.bran
 		}
 
 		.tab-control__nav--dropdown {
-			@apply absolute top-full right-1 hidden lg:relative lg:right-0 lg:flex lg:items-center;
+			@apply absolute top-full right-1 hidden lg:relative lg:right-0 lg:flex lg:items-center z-20;
 		}
 
 		.tab-control__nav--active {
@@ -138,7 +138,7 @@ const viewSourceHref = `${githubUrl}/${SITE_PARAMS.repo}/blob/${SITE_PARAMS.bran
 
 		/* TAB CONTENT */
 		.tab-content {
-			@apply border border-zinc-700 px-4 md:px-6 lg:px-8 xl:px-16;
+			@apply border border-zinc-700 px-4 md:px-6;
 		}
 
 		.tab-content__item {

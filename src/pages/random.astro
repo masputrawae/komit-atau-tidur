@@ -15,7 +15,6 @@ const getUrl = docs.flatMap(doc => relUrl(doc.id))
 			document.addEventListener('DOMContentLoaded', () => {
 				const getJson = document.querySelector('[data-json-href]')
 				const urlParse = JSON.parse(getJson.getAttribute('data-json-href'))
-
 				const random = Math.floor(Math.random() * urlParse.length)
 				window.location.href = urlParse[random]
 			})

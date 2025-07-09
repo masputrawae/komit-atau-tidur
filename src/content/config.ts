@@ -37,12 +37,10 @@ const historyOnGit = defineCollection({
 			author: z.object({
 				name: z.string(),
 				email: z.string().email(),
-				date: z.string()
 			}),
 			committer: z.object({
 				name: z.string(),
 				email: z.string().email(),
-				date: z.string()
 			}),
 			diff: z.string()
 		})
