@@ -1,14 +1,13 @@
 ---
 import { getCollection } from 'astro:content'
 import { relUrl } from '../assets/utils/url'
-import BaseLayout from '../assets/layouts/BaseLayout.astro'
 
 const docs = await getCollection('docs')
 const getUrl = docs.flatMap(doc => relUrl(doc.id))
 ---
 
 <!doctype html>
-<html lang="en" style="background-color: black;">
+<html lang="en" style="background-color: #18181b;">
 	<head data-json-href={JSON.stringify(getUrl)}>
 		<meta charset="UTF-8" />
 		<title>Random Page</title>
