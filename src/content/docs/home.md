@@ -15,7 +15,7 @@ created: 2025-07-08T23:39:28+07:00
 updated: 2025-07-08T23:39:28+07:00
 description: Tempatku untuk menyimpan catatan dan pengetahuan yang ku dapat.
 author: Putra Jaya
-image: https://picsum.photos/1080/720
+image: '/thumbnail.webp'
 sidebar:
   order: 1
   group: 'main-menu'

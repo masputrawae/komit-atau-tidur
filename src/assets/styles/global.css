@@ -13,6 +13,9 @@
 	--text-5xl: 1.48rem;
 	--text-6xl: 1.57rem;
 	--text-7xl: 1.68rem;
+
+  --font-noto: 'Noto Sans',sans-serif;
+  --font-fira: 'Fira Code',monospace;
 }
 
 @layer base {
@@ -24,6 +27,7 @@
       prose-headings:font-normal
       prose-a:text-sky-400 prose-a:hover:text-sky-500 prose-a:visited:text-sky-600
       prose-pre:overflow-x-auto
-      max-w-full font-sans text-[14px] leading-relaxed;
+      max-w-full text-[14px] leading-relaxed font-noto
+      prose-pre:font-fira prose-code:font-fira prose-code:before:content-none prose-code:after:content-none;
   }
 }

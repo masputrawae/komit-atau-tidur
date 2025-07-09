@@ -2,6 +2,7 @@ interface SiteParams{
   title: string;
   author: string;
   tagline: string;
+  twitter: string;
   logo: string;
   image: string;
   description: string;
@@ -18,22 +19,23 @@ export const SITE_PARAMS: SiteParams = {
    * default parameter if content does not have author parameter.
    */
   title: 'Astro Test',
-  author: 'Astro Test',
+  author: 'Putra Jaya',
   tagline: 'Manusia Biasa',
+  twitter: '@Masputrawae',
 
   /**
    * Used for default Parameters 
    * Place assets in public or cloud 
    * */
-  logo: '/favicon.svg',
-  image: 'https://picsum.photos/100/300',
+  logo: '/logo.webp',
+  image: '/thumbnail.webp',
 
   /** 
    * Site description
    * Site tags and for fallback of content without tags
    */
   description: 'Do magna non duis nulla excepteur enim ipsum excepteur cillum consectetur.',
-  tags: ['Hallo', 'world'],
+  tags: ['Hallo', 'world', 'testing', 'astro'],
 
   /**
    * Github Link

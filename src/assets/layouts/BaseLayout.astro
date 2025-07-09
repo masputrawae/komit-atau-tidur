@@ -4,46 +4,142 @@ import '../styles/global.css'
 import Sidebar from '../components/Sidebar.astro'
 import TopBar from '../components/TopBar.astro'
 
-import { SEO } from "astro-seo";
+import { SEO } from 'astro-seo'
+import { absUrl, relUrl } from '../utils/url'
+import { SITE_PARAMS } from '../../site.config'
 
 const { entry } = Astro.props
+const { pathname } = Astro.url
+
+const title = pathname === relUrl('/') ? SITE_PARAMS.title : `${entry.data.title} | ${SITE_PARAMS.title}`
+const image = entry.data.image ?? SITE_PARAMS.image
+const twitter = SITE_PARAMS.twitter
+const author = entry.data.author ?? SITE_PARAMS.author
+const url = absUrl(entry.id)
+const publicTime = new Date(entry.data.created).toISOString()
+const updateTime = new Date(entry.data.updated || 0).toISOString()
+const tags = entry.data.tags ?? SITE_PARAMS.tags
+
+let description
+if (pathname === relUrl('/')) {
+	description = entry.data.description
+} else if (entry.data.description) {
+	description = SITE_PARAMS.description
+} else {
+	description = `Catatan Yang Membahas Tentang ${entry.data.title}`
+}
+
+import notoSansRegular from '../fonts/noto-sans-v39-latin-regular.woff2'
+import notoSans700 from '../fonts/noto-sans-v39-latin-700.woff2'
+import firaCode from '../fonts/fira-code-v26-latin-regular.woff2'
+
+// Font Css
+const fontCSS = `
+  @font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('${notoSansRegular}') format('woff2');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('${notoSans700}') format('woff2');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-variant-ligatures: none;
+    font-feature-settings: 'liga' 0, 'calt' 0;
+    src: url('${firaCode}') format('woff2');
+  }
+`
 ---
 
-<html lang="en" class="font-sans" style="scrollbar-width: thin;">
+<html lang="id" class="font-sans" style="scrollbar-width: thin;">
 	<head>
-    <SEO
-      title={ entry.data.title }
-      description="A heavily optimized description full of well-researched keywords."
-      openGraph={{
-        basic: {
-          title: entry.data.title,
-          type: "A type.",
-          image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-        }
-      }}
-      twitter={{
-        creator: "@jonasmerlins1"
-      }}
-      extend={{
-        // extending the default link tags
-        link: [{ rel: "icon", href: "/favicon.ico" }],
-        // extending the default meta tags
-        meta: [
-          {
-            name: "twitter:image",
-            content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-          },
-          { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
-          { name: "twitter:description", content: "Agent" },
-        ],
-      }}
-    />
+    <style is:global set:html={fontCSS}></style>
+		<SEO
+			title={title}
+			description={description}
+			openGraph={{
+				basic: {
+					title: title,
+					type: 'article',
+					image: absUrl(image),
+					url: url
+				},
+				optional: {
+					description: description,
+					siteName: title,
+				},
+				article: {
+					publishedTime: publicTime,
+					modifiedTime: updateTime,
+					authors: [author],
+					tags: tags
+				}
+			}}
+			twitter={{
+				site: title,
+				title: title,
+				description: description,
+				image: absUrl(image),
+				imageAlt: description,
+				card: 'summary_large_image',
+				creator: twitter
+			}}
+			extend={{
+				link: [
+					{
+						rel: 'apple-touch-icon',
+						type: 'image/png',
+						sizes: '192x192',
+						href: relUrl('/favicons/apple-touch-icon.png')
+					},
+					{
+						rel: 'icon',
+						type: 'image/png',
+						sizes: '512x512',
+						href: relUrl('/favicons/android-chrome-512x512.png')
+					},
+					{
+						rel: 'icon',
+						type: 'image/png',
+						sizes: '192x192',
+						href: relUrl('/favicons/android-chrome-192x192.png')
+					},
+					{
+						rel: 'icon',
+						type: 'image/png',
+						sizes: '32x32',
+						href: relUrl('/favicons/favicon-32x32.png')
+					},
+					{
+						rel: 'icon',
+						type: 'image/png',
+						sizes: '16x16',
+						href: relUrl('/favicons/favicon-16x16.png')
+					},
+					{ rel: 'icon', type: 'image/x-icon', href: relUrl('/favicons/favicon.ico') },
+					{ rel: 'manifest', href: relUrl('/favicons/site.webmanifest') },
+					{ rel: 'sitemap', href: relUrl('/sitemap-index.xml') }
+				],
+				meta: [
+					{ name: 'twitter:image', content: absUrl(image) },
+					{ name: 'twitter:title', content: title },
+					{ name: 'twitter:description', content: description },
+					{ name: 'generator', content: Astro.generator },
+					{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+				]
+			}}
+		/>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-
-    <link rel="sitemap" href="/sitemap-index.xml" />
 	</head>
 	<body class="bg-zinc-900 text-[14px] text-zinc-300">
 		<div class="isolate lg:grid lg:grid-cols-[18rem_minmax(0,1fr)]">
@@ -53,6 +149,6 @@ const { entry } = Astro.props
 				<slot />
 			</div>
 		</div>
-    <script src="../scripts/main.js"></script>
+		<script src="../scripts/main.js"></script>
 	</body>
 </html>
