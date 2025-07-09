@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content'
+import { relUrl } from '../assets/utils/url'
+import BaseLayout from '../assets/layouts/BaseLayout.astro'
+
+const docs = await getCollection('docs')
+const getUrl = docs.flatMap(doc => relUrl(doc.id))
+---
+
+<!doctype html>
+<html lang="en" style="background-color: black;">
+	<head data-json-href={JSON.stringify(getUrl)}>
+		<meta charset="UTF-8" />
+		<title>Random Page</title>
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', () => {
+				const getJson = document.querySelector('[data-json-href]')
+				const urlParse = JSON.parse(getJson.getAttribute('data-json-href'))
+
+				const random = Math.floor(Math.random() * urlParse.length)
+				window.location.href = urlParse[random]
+			})
+		</script>
+	</head>
+	<body> </body>
+</html>

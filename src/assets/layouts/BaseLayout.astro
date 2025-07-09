@@ -20,9 +20,6 @@ const histories = await getCollection('historyOnGit')
 const filterHistory = histories.filter(history => history.id === entry.filePath)
 const updateTimeOnGit = filterHistory.map(item => item.data[0].date).toString()
 
-console.log('🚀 log 🚀:', updateTimeOnGit);
-
-
 const title = pathname === relUrl('/') ? SITE_PARAMS.title : `${entry.data.title} | ${SITE_PARAMS.title}`
 const image = entry.data.image ?? SITE_PARAMS.image
 const twitter = SITE_PARAMS.twitter
