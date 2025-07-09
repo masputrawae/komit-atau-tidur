@@ -17,10 +17,6 @@ export default defineConfig({
 	build: {
 		inlineStylesheets: 'never'
 	},
-	vite: {
-		plugins: [tailwindcss()]
-	},
-
 	integrations: [
 		brainDbAstro({
 			root: 'src/content/docs',
@@ -37,8 +33,10 @@ export default defineConfig({
 		pagefind(),
 		sitemap()
 	],
-
 	markdown: {
 		remarkPlugins: [remarkCallout, [remarkRemoveHeading, { depth: 1 }]]
+	},
+	vite: {
+		plugins: [tailwindcss()]
 	}
 })

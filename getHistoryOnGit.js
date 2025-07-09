@@ -62,7 +62,8 @@ function getFullHistoryMap() {
 			let diff = ''
 			try {
 				// Ambil ringkasan diff (stat) hanya untuk file ini di commit ini
-				diff = execSync(`git show --stat ${currentCommit.hash} -- ${file}`, { encoding: 'utf-8' })
+        // Opsional Lebih lama: diff = execSync(`git show --stat ${currentCommit.hash} -- ${file}`, { encoding: 'utf-8' })
+				diff = execSync(`git show --stat ${currentCommit.hash}`, { encoding: 'utf-8' })
 				diff = diff.split('\n').find((line) => line.includes('file changed')) || ''
 			} catch (err) {
 				console.warn(`⚠️ Gagal ambil diff untuk ${file} di commit ${currentCommit.hash}:`, err)
