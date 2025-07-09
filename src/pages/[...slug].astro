@@ -25,7 +25,7 @@ const { Content } = await render(entry)
 
 <BaseLayout entry={entry}>
 	<div class="lg:-ml-[1px]">
-		<ContentLayout heading={entry.data.title}>
+		<ContentLayout heading={entry.data.title} id={entry.id} filePath={entry.filePath}>
 			<div slot="readTab">
 				<Content />
 			</div>

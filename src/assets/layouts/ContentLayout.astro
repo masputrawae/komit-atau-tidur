@@ -1,8 +1,15 @@
 ---
 import Giscus from '../components/Giscus.astro'
 import Search from 'astro-pagefind/components/Search'
+import { relUrl } from '../utils/url'
+import { SITE_PARAMS } from '../../site.config'
 
-const { heading } = Astro.props
+const { heading, id, filePath } = Astro.props
+
+const githubUrl = `https://github.com`
+
+const editPageHref = `${githubUrl}/${SITE_PARAMS.repo}/edit/${SITE_PARAMS.branch}/${filePath}`
+const viewSourceHref = `${githubUrl}/${SITE_PARAMS.repo}/blob/${SITE_PARAMS.branch}/${filePath}?plain=1`
 ---
 
 <header class="tab-control">
@@ -16,8 +23,8 @@ const { heading } = Astro.props
 	<div class="flex items-center">
 		<nav id="dropdownMain" class="tab-control__nav tab-control__nav--dropdown">
 			<button data-tab-target="historyTab" class="tab-control__btn -mr-[1px]">View History</button>
-			<a href="#" class="tab-control__btn -mr-[1px]">View Source</a>
-			<a href="#" class="tab-control__btn -mr-[1px]">Edit Page</a>
+			<a href={viewSourceHref} class="tab-control__btn -mr-[1px]">View Source</a>
+			<a href={editPageHref} class="tab-control__btn -mr-[1px]">Edit Page</a>
 			<button
 				data-tab-target="searchTab"
 				class="tab-control__btn flex w-72 items-center gap-2 text-left"
