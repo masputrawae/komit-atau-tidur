@@ -24,6 +24,6 @@
       prose-headings:font-normal
       prose-a:text-sky-400 prose-a:hover:text-sky-500 prose-a:visited:text-sky-600
       prose-pre:overflow-x-auto
-      max-w-full font-sans text-sm sm:text-base leading-relaxed;
+      max-w-full font-sans text-[14px] leading-relaxed;
   }
 }

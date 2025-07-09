@@ -14,5 +14,10 @@ export const SIDEBAR: SidebarItems[] = [
     id: 'second-menu',
     label: 'Second Menu',
     order: 2
+  },
+  {
+    id: 'other',
+    label: 'Other',
+    order: 3,
   }
 ]

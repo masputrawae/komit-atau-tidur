@@ -21,9 +21,9 @@ const { entry } = Astro.props
 const { Content } = await render(entry)
 ---
 
-<BaseLayout>
-	<div class="-ml-[1px]">
-		<ContentLayout>
+<BaseLayout entry={entry}>
+	<div class="lg:-ml-[1px]">
+		<ContentLayout heading={entry.data.title}>
 			<div slot="readTab">
 				<Content />
 			</div>

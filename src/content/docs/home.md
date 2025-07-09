@@ -18,6 +18,6 @@ author: Putra Jaya
 image: https://picsum.photos/1080/720
 sidebar:
   order: 1
-  group: 'main-main'
+  group: 'main-menu'
 slug: /
 ---

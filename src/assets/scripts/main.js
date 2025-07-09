@@ -36,11 +36,11 @@ $$('[data-tab-target]').forEach((btn) => {
 	const target = btn.getAttribute('data-tab-target')
 
 	onClick(btn, () => {
-		$$('.tab-content').forEach((e) => e.classList.remove('active'))
-		$$('[data-tab-target]').forEach((e) => e.classList.remove('active'))
+		$$('.tab-content__item').forEach((e) => e.classList.remove('tab-content__item--active'))
+		$$('[data-tab-target]').forEach((e) => e.classList.remove('tab-control__btn--active'))
 
-		$(`#${target}`).classList.add('active')
-		$(`[data-tab-target=${target}]`).classList.add('active')
+		$(`#${target}`).classList.add('tab-content__item--active')
+		$(`[data-tab-target=${target}]`).classList.add('tab-control__btn--active')
 	})
 })
 
@@ -56,7 +56,7 @@ $$('[data-dropdown-target]').forEach((btn) => {
 
 	onClick(btn, (e) => {
 		// Toggle tampil
-		dropdown.classList.toggle('hidden')
+		dropdown.classList.toggle('tab-control__nav--active')
 		// Hentikan bubbling agar klik pada btn tidak dianggap klik luar
 		e.stopPropagation()
 	})
@@ -64,9 +64,9 @@ $$('[data-dropdown-target]').forEach((btn) => {
 
 onClick(document, (event) => {
 	dropdownMap.forEach((dropdown, btn) => {
-		// Jika klik di luar tombol dan di luar dropdown, tutup
+		// Jika klik di luar tombol dropdown, tutup
 		if (!btn.contains(event.target)) {
-			dropdown.classList.add('hidden')
+			dropdown.classList.remove('tab-control__nav--active')
 		}
 	})
 })

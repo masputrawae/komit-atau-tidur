@@ -12,7 +12,7 @@ image: 'https://picsum.photos/300/600'
 # Optional Sidebar
 sidebar:
   order: 3
-  group: main-menu
+  group: 'main-menu'
 ---
 
 # This Is Index Blog

@@ -1,69 +1,146 @@
 ---
+import Giscus from '../components/Giscus.astro'
+import Search from 'astro-pagefind/components/Search'
+
 const { heading } = Astro.props
 ---
 
-<header class="tab-control flex items-center justify-between pt-5">
-	<nav class="tab-nav flex items-center">
-		<button data-tab-target="readTab" class="tab-btn active -mr-[1px]">Read</button>
-		<button data-tab-target="talkTab" class="tab-btn">Discussion</button>
+<header class="tab-control">
+	<nav class="tab-control__nav">
+		<button data-tab-target="readTab" class="tab-control__btn tab-control__btn--active">Read</button
+		>
+		<button data-tab-target="talkTab" class="tab-control__btn -ml-[1px]">Discussion</button>
 	</nav>
 
-	<div class="dropdown-wrapper">
-		<button data-dropdown-target="dropdownMain" class="tab-btn lg:hidden">More</button>
-
-		<nav id="dropdownMain" class="tab-nav hidden lg:flex lg:items-center">
-			<button data-tab-target="historyTab" class="tab-btn lg:-mr-[1px]">View History</button>
-			<a href="#" class="tab-btn lg:-mr-[1px]">View Source</a>
-			<a href="#" class="tab-btn lg:-mr-[1px]">Edit Page</a>
-			<button data-tab-target="searchTab" class="tab-btn lg:-ml-[1px]">Search:...</button>
+	{/* DROPDOWN IN MOBILE */}
+	<div class="flex items-center">
+		<nav id="dropdownMain" class="tab-control__nav tab-control__nav--dropdown">
+			<button data-tab-target="historyTab" class="tab-control__btn -mr-[1px]">View History</button>
+			<a href="#" class="tab-control__btn -mr-[1px]">View Source</a>
+			<a href="#" class="tab-control__btn -mr-[1px]">Edit Page</a>
+			<label
+				data-tab-target="searchTab"
+				for="search"
+				class="tab-control__btn flex w-72 items-center gap-2 text-left"
+			>
+				Search: <span
+					class="inline-block h-4 w-full cursor-text rounded-xs bg-zinc-900 ring-1 ring-zinc-700"
+				></span>
+			</label>
 		</nav>
+
+		<div class="tab-control__nav">
+			<button
+				data-dropdown-target="dropdownMain"
+				class="tab-control__btn tab-control__btn--dropdown">More</button
+			>
+		</div>
 	</div>
 </header>
 
-<main class="tab-wrapper px-2 md:px-4 lg:px-8 xl:px-16 markdown">
-	<article id="readTab" class="tab-content active">
+<main class="tab-content markdown">
+	<article id="readTab" class="tab-content__item tab-content__item--active">
 		<h1>{heading}</h1>
 		<slot name="readTab" />
 	</article>
 
-	<aside id="talkTab" class="tab-content">
+	<aside id="talkTab" class="tab-content__item">
 		<h1>Talk In: {heading}</h1>
-		<!-- Isi Nanti -->
+		<Giscus />
 	</aside>
 
-	<aside id="historyTab" class="tab-content">
+	<aside id="historyTab" class="tab-content__item">
 		<h1>History In: {heading}</h1>
 		<slot name="historyTab" />
 	</aside>
 
-	<aside id="searchTab" class="tab-content">
-		<h1>Search</h1>
+	<aside id="searchTab" class="tab-content__item">
+		<Search id="search" className="pagefind-ui dark p-4" uiOptions={{ showImages: false }} />
 	</aside>
 </main>
 
+<style is:global>
+	.pagefind-ui.dark {
+		--pagefind-ui-primary: #fff;
+		--pagefind-ui-text: #d4d4d4;
+		--pagefind-ui-background: #18181b;
+		--pagefind-ui-border: #27272a;
+		--pagefind-ui-tag: #3f3f46;
+    --pagefind-ui-scale: 0.65;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 0.25rem;
+    --pagefind-ui-font: sans-serif;
+		width: 100%;
+	}
+	.pagefind-ui .pagefind-ui__drawer:not(.pagefind-ui__hidden) {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-top: 0px;
+		z-index: 9999;
+		padding: 0 2em 1em;
+		overflow-y: auto;
+		box-shadow:
+			0 10px 10px -5px rgba(0, 0, 0, 0.2),
+			0 2px 2px 0 rgba(0, 0, 0, 0.1);
+		border-bottom-right-radius: var(--pagefind-ui-border-radius);
+		border-bottom-left-radius: var(--pagefind-ui-border-radius);
+		background-color: var(--pagefind-ui-background);
+	}
+
+	.pagefind-ui .pagefind-ui__result-link {
+		color: var(--pagefind-ui-primary);
+	}
+
+	.pagefind-ui .pagefind-ui__result-excerpt {
+		color: var(--pagefind-ui-text);
+	}
+</style>
 <style>
 	@reference '../styles/global.css';
-  @layer components {
-    .tab-btn {
-      @apply border border-zinc-700 -mb-[1px] bg-zinc-800 px-2 py-1;
-      background: linear-gradient(180deg,rgb(40, 40, 40) 0%, rgb(26, 26, 26) 100%);
-    }
+	@layer components {
+		/* TAB CONTROLS */
+		.tab-control {
+			@apply relative flex items-center justify-between pt-4 lg:pt-10;
+		}
 
-    .tab-btn.active {
-      @apply border-b-zinc-900 bg-zinc-900;
-      background: none;
-    }
+		.tab-control__nav {
+			@apply -mb-[1px] flex items-center;
+		}
 
-    .tab-wrapper {
-      @apply border border-zinc-700;
-    }
+		/* TAB BUTTONS */
+		.tab-control__btn {
+			@apply cursor-pointer border border-zinc-700 bg-linear-to-t from-zinc-800 to-zinc-900 px-4 py-2 text-left text-xs lg:text-center;
+		}
 
-    .tab-content {
-      @apply hidden;
-    }
+		.tab-control__btn--active {
+			@apply border-b-zinc-900 bg-linear-to-t from-zinc-900 to-zinc-900;
+		}
 
-    .tab-content.active {
-      @apply block;
-    }
-  }
+		/* TAB CONTROL DROPDOWN */
+		.tab-control__btn--dropdown {
+			@apply lg:hidden;
+		}
+
+		.tab-control__nav--dropdown {
+			@apply absolute top-full right-1 hidden lg:relative lg:right-0 lg:flex lg:items-center;
+		}
+
+		.tab-control__nav--active {
+			@apply grid;
+		}
+
+		/* TAB CONTENT */
+		.tab-content {
+			@apply border border-zinc-700 px-4 md:px-6 lg:px-8 xl:px-16;
+		}
+
+		.tab-content__item {
+			@apply hidden min-h-dvh;
+		}
+
+		.tab-content__item--active {
+			@apply block;
+		}
+	}
 </style>

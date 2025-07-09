@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
 import icon from 'astro-icon'
 import remarkCallout from '@r4ai/remark-callout'
+import pagefind from 'astro-pagefind'
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,11 +14,7 @@ export default defineConfig({
 		plugins: [tailwindcss()]
 	},
 
-	integrations: [
-		icon({
-			iconDir: 'src/assets/icons'
-		})
-	],
+	integrations: [icon({iconDir: 'src/assets/icons'}, pagefind())],
 
   markdown: {
     remarkPlugins: [
