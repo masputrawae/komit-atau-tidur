@@ -17,7 +17,7 @@ const filterHistory = histories.filter(history => history.id === entry.filePath)
 			<ol class="relative border-l border-zinc-700">
 				{history.data.map(item => (
 					<li class="mb-10 ml-6">
-						<span class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-sky-500 ring-8 ring-zinc-900" />
+						<span class="absolute -left-2 flex size-4 items-center justify-center rounded-full bg-sky-500 ring-8 ring-zinc-950" />
 
 						<time class="mb-1 text-sm leading-none font-normal text-zinc-400"  datetime={new Date(item.date).toISOString()}>
 							{new Date(item.date).toLocaleString()}

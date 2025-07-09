@@ -30,13 +30,15 @@ const sidebar = SIDEBAR.map(item => {
 
 <header
 	id="sidebar"
-	class="invisible fixed top-0 left-0 z-50 flex h-dvh w-2xs -translate-x-full flex-col gap-5 border-r border-r-zinc-800 bg-zinc-900 p-4 shadow-sm shadow-black transition-all duration-300 lg:translate-none lg:visible lg:sticky lg:shadow-none"
+	class="invisible fixed top-0 left-0 z-50 flex h-dvh w-2xs -translate-x-full flex-col gap-5 border-r border-r-zinc-800 bg-zinc-900 p-4 shadow-sm shadow-black transition-all duration-300 lg:w-3xs lg:visible lg:sticky lg:translate-none lg:border-r-0 lg:shadow-none"
 >
 	<TopBar inSidebar={true} />
 	{
 		sidebar.map(group => (
 			<nav class="flex flex-col gap-1">
-				<strong class="my-2 border-b border-zinc-800 pb-1 text-shadow-sm text-shadow-black">{group.label}</strong>
+				<strong class="my-2 border-b border-zinc-800 pb-1 text-shadow-black text-shadow-sm">
+					{group.label}
+				</strong>
 				{group.items.map(item => {
 					const { pathname } = Astro.url
 					const isActive = pathname === item.href
@@ -44,7 +46,7 @@ const sidebar = SIDEBAR.map(item => {
 					return (
 						<a
 							href={item.href}
-							class="ml-2 text-shadow-sm text-shadow-black"
+							class="ml-2 text-shadow-black text-shadow-sm"
 							class:list={isActive ? 'text-white' : 'text-zinc-400 hover:text-white'}
 						>
 							{item.title}
@@ -56,8 +58,8 @@ const sidebar = SIDEBAR.map(item => {
 	}
 </header>
 <style>
-  @reference '../styles/global.css';
+	@reference '../styles/global.css';
 	#sidebar.isActive {
-    @apply translate-none visible;
+		@apply visible translate-none;
 	}
 </style>

@@ -7,7 +7,6 @@ import { render } from 'astro:content'
 import type { GetStaticPaths } from 'astro'
 import History from '../assets/components/History.astro'
 
-
 export const getStaticPaths = (async () => {
 	const docs = await getCollection('docs')
 
@@ -24,15 +23,13 @@ const { Content } = await render(entry)
 ---
 
 <BaseLayout entry={entry}>
-	<div class="lg:-ml-[1px]">
-		<ContentLayout heading={entry.data.title} id={entry.id} filePath={entry.filePath}>
-			<div slot="readTab">
-				<Content />
-			</div>
+	<ContentLayout heading={entry.data.title} id={entry.id} filePath={entry.filePath}>
+		<div slot="readTab">
+			<Content />
+		</div>
 
-			<div slot="historyTab">
-				<History entry={entry} />
-			</div>
-		</ContentLayout>
-	</div>
+		<div slot="historyTab">
+			<History entry={entry} />
+		</div>
+	</ContentLayout>
 </BaseLayout>

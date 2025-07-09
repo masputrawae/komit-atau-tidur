@@ -7,6 +7,7 @@ import firaCode from '../fonts/fira-code-v26-latin-regular.woff2'
 
 import Sidebar from '../components/Sidebar.astro'
 import TopBar from '../components/TopBar.astro'
+import Footer from '../components/Footer.astro'
 
 import { SEO } from 'astro-seo'
 import { absUrl, relUrl } from '../utils/url'
@@ -68,6 +69,7 @@ const fontCSS = `
 
 <html lang="id" class="font-sans" style="scrollbar-width: thin;">
 	<head>
+		<meta charset="utf-8" />
     <style set:html={fontCSS}></style>
 		<SEO
 			title={title}
@@ -144,14 +146,14 @@ const fontCSS = `
 				]
 			}}
 		/>
-		<meta charset="utf-8" />
 	</head>
 	<body class="bg-zinc-900 text-[14px] text-zinc-300">
-		<div class="isolate lg:grid lg:grid-cols-[18rem_minmax(0,1fr)]">
+		<div class="isolate lg:grid lg:grid-cols-[16rem_minmax(0,1fr)]">
 			<Sidebar />
 			<div>
 				<TopBar />
 				<slot />
+        <Footer />
 			</div>
 		</div>
 		<script src="../scripts/main.js"></script>
