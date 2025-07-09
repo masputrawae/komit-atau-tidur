@@ -25,6 +25,28 @@ const docs = defineCollection({
 			group: z.enum(getEnum)
 		}).optional()
 	})
+});
+
+const historyOnGit = defineCollection({
+	loader: file('src/content/data/historyOnGit.json'),
+	schema: z.array(
+		z.object({
+			hash: z.string(),
+			date: z.coerce.date(),
+			message: z.string(),
+			author: z.object({
+				name: z.string(),
+				email: z.string().email(),
+				date: z.string()
+			}),
+			committer: z.object({
+				name: z.string(),
+				email: z.string().email(),
+				date: z.string()
+			}),
+			diff: z.string()
+		})
+	)
 })
 
-export const collections = { docs }
+export const collections = { docs, historyOnGit }

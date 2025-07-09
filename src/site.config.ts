@@ -41,6 +41,6 @@ export const SITE_PARAMS: SiteParams = {
    * Github Link
    */
   github: 'https://github.com/masputrawae',
-  repo: 'masputrawae/READMEnya-ada-nanti',
+  repo: 'masputrawae/komit-atau-tidur',
   branch: 'main'
 }

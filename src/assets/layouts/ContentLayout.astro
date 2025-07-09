@@ -18,15 +18,14 @@ const { heading } = Astro.props
 			<button data-tab-target="historyTab" class="tab-control__btn -mr-[1px]">View History</button>
 			<a href="#" class="tab-control__btn -mr-[1px]">View Source</a>
 			<a href="#" class="tab-control__btn -mr-[1px]">Edit Page</a>
-			<label
+			<button
 				data-tab-target="searchTab"
-				for="search"
 				class="tab-control__btn flex w-72 items-center gap-2 text-left"
 			>
 				Search: <span
 					class="inline-block h-4 w-full cursor-text rounded-xs bg-zinc-900 ring-1 ring-zinc-700"
 				></span>
-			</label>
+			</button>
 		</nav>
 
 		<div class="tab-control__nav">

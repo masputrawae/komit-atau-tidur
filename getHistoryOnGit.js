@@ -54,6 +54,7 @@ function getFullHistoryMap() {
       const file = line.trim()
 
       // console.log(`⏳ Processing ${file} @ ${currentCommit.hash}`) Opsional Jika Perlu
+      console.log(`⏳ Processing ${file} @ ${currentCommit.hash}`)
 
       // Jika file belum ada di map, buat array kosong
       if (!map[file]) map[file] = []
@@ -82,6 +83,7 @@ function getFullHistoryMap() {
 const map = getFullHistoryMap()
 
 // Simpan hasil ke file JSON di ./src/content/data/historyOnGit.json
-fs.writeFileSync('./src/content/data/historyOnGit.json', JSON.stringify(map, null, 2))
+// Optional JSON.stringify(map, null, 2) jika ingin output rapih
+fs.writeFileSync('./src/content/data/historyOnGit.json', JSON.stringify(map))
 
 console.log(`✅ History map generated: ${Object.keys(map).length} files with diffs`)

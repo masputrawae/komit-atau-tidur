@@ -5,6 +5,7 @@ import ContentLayout from '../assets/layouts/ContentLayout.astro'
 import { getCollection } from 'astro:content'
 import { render } from 'astro:content'
 import type { GetStaticPaths } from 'astro'
+import History from '../assets/components/History.astro'
 
 
 export const getStaticPaths = (async () => {
@@ -20,7 +21,6 @@ export const getStaticPaths = (async () => {
 
 const { entry } = Astro.props
 const { Content } = await render(entry)
-
 ---
 
 <BaseLayout entry={entry}>
@@ -31,7 +31,7 @@ const { Content } = await render(entry)
 			</div>
 
 			<div slot="historyTab">
-				<p>Histori Nanti Ada</p>
+				<History entry={entry} />
 			</div>
 		</ContentLayout>
 	</div>

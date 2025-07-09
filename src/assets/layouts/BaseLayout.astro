@@ -1,15 +1,27 @@
 ---
 import '../styles/global.css'
 
+import notoSansRegular from '../fonts/noto-sans-v39-latin-regular.woff2'
+import notoSans700 from '../fonts/noto-sans-v39-latin-700.woff2'
+import firaCode from '../fonts/fira-code-v26-latin-regular.woff2'
+
 import Sidebar from '../components/Sidebar.astro'
 import TopBar from '../components/TopBar.astro'
 
 import { SEO } from 'astro-seo'
 import { absUrl, relUrl } from '../utils/url'
 import { SITE_PARAMS } from '../../site.config'
+import { getCollection } from 'astro:content'
 
 const { entry } = Astro.props
 const { pathname } = Astro.url
+
+const histories = await getCollection('historyOnGit')
+const filterHistory = histories.filter(history => history.id === entry.filePath)
+const updateTimeOnGit = filterHistory.map(item => item.data[0].date).toString()
+
+console.log('🚀 log 🚀:', updateTimeOnGit);
+
 
 const title = pathname === relUrl('/') ? SITE_PARAMS.title : `${entry.data.title} | ${SITE_PARAMS.title}`
 const image = entry.data.image ?? SITE_PARAMS.image
@@ -17,7 +29,7 @@ const twitter = SITE_PARAMS.twitter
 const author = entry.data.author ?? SITE_PARAMS.author
 const url = absUrl(entry.id)
 const publicTime = new Date(entry.data.created).toISOString()
-const updateTime = new Date(entry.data.updated || 0).toISOString()
+const updateTime = new Date(entry.data.updated || updateTimeOnGit).toISOString()
 const tags = entry.data.tags ?? SITE_PARAMS.tags
 
 let description
@@ -28,10 +40,6 @@ if (pathname === relUrl('/')) {
 } else {
 	description = `Catatan Yang Membahas Tentang ${entry.data.title}`
 }
-
-import notoSansRegular from '../fonts/noto-sans-v39-latin-regular.woff2'
-import notoSans700 from '../fonts/noto-sans-v39-latin-700.woff2'
-import firaCode from '../fonts/fira-code-v26-latin-regular.woff2'
 
 // Font Css
 const fontCSS = `
@@ -63,7 +71,7 @@ const fontCSS = `
 
 <html lang="id" class="font-sans" style="scrollbar-width: thin;">
 	<head>
-    <style is:global set:html={fontCSS}></style>
+    <style set:html={fontCSS}></style>
 		<SEO
 			title={title}
 			description={description}
