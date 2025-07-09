@@ -1,21 +1,11 @@
 ---
-id: '20250708070000'
-title: 'Main Page'
+id: "20250708070000"
+title: Typography
 created: 2025-07-08T07:00:00+07:00
-
-# Optional
 updated: 2025-07-08T07:00:00+07:00
-description: 'Officia aliqua laboris magna officia consectetur sint magna amet.'
-tags: ['Main Page', 'Testing', 'Other']
-image: 'https://picsum.photos/300/600'
-
-# Optional Sidebar
-sidebar: 
-  order: 1
-  group: main-menu
-
-# use the slug `/` for the Main Page
-slug: '/'
+description: Officia aliqua laboris magna officia consectetur sint magna amet.
+tags: []
+image: https://picsum.photos/300/600
 ---
 
 # This Is Main Page

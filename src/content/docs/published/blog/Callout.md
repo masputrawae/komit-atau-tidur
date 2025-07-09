@@ -15,8 +15,6 @@ sidebar:
   group: second-menu
 ---
 
-# Callout Preview
-
 Velit et Lorem qui aliqua ullamco ullamco ipsum consectetur nisi nulla do do sit. Aliqua consectetur minim tempor nulla anim elit reprehenderit do cillum aliqua magna exercitation ut. Consectetur ad reprehenderit enim cupidatat mollit esse consectetur excepteur. Excepteur anim exercitation dolor esse cupidatat in reprehenderit proident. Laboris sunt ipsum commodo labore. Ipsum sit duis reprehenderit id minim.
 
 > [!note]
