@@ -8,6 +8,7 @@ import pagefind from 'astro-pagefind'
 
 import sitemap from '@astrojs/sitemap'
 import brainDbAstro, { generateSlug } from '@braindb/astro'
+import remarkRemoveHeading from './src/assets/utils/remarkH1'
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,6 +39,6 @@ export default defineConfig({
 	],
 
 	markdown: {
-		remarkPlugins: [remarkCallout]
+		remarkPlugins: [remarkCallout, [remarkRemoveHeading, { depth: 1 }]]
 	}
 })
